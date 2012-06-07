@@ -1,2 +1,15 @@
+<% head_assets 'users' %>
 <h1>Users#login</h1>
-<p>Find me in app/views/users/login.html.erb</p>
+
+
+<%= form_tag session_path do %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions"><%= submit_tag "Log in" %></div>
+<% end %>

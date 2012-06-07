@@ -1,0 +1,21 @@
+<h1><%= @user.first_name %>'s Albums</h1>
+<div id="albums" class="albums">
+<% 
+	if(@albums)
+		@albums.each do |album| 
+%>
+	<div class="album">
+    <div><%= album.name %></div>
+    <div><%= album.description %></div>
+    <div><%= link_to 'Show', album %></div>
+    <div><%= link_to 'Edit', edit_user_path(album) %></div>
+    <div><%= link_to 'Delete', album, confirm: 'Are you sure?', method: :delete %></div>
+    </div>
+<% 		end
+	else
+%>
+
+	<div>You have not created any albums! <%= link_to "Create one now...", new_album_path %></div>
+
+<% end %>
+</div>

@@ -1,26 +1,22 @@
- 	<div class="gradient">
- 		<div class="container">
- 			<div class="welcome">
- 				<p>Toast helps you share your journeys with people you care about.</p>
- 				<div class="info">
-	 				<%= image_tag "phone.png", {:style=>"float:left;"} %>
- 					<div class="details">
- 						<p style="font-size: 16pt">Toast Leaves Breadcrumbs.</p>
- 						<p>Record notes, photos, videos and audio.</p>
- 						<p>Toast saves it all on the cloud and puts it on a map to commemorate and share any journey large or small, far afield or close to home.</p>
+<% head_assets 'home' %>
+<div id="front-page" class="front-page">
+	<div class="welcome">
+		<p>Toast helps you share your journeys with people you care about.</p>
+		<div class="info">
+			<%= image_tag "phone.png", {:style=>"float:left;"} %>
+			<div class="details">
+				<p style="font-size: 16pt">Toast Leaves Breadcrumbs.</p>
+				<p>Record notes, photos, videos and audio.</p>
+				<p>Toast saves it all on the cloud and puts it on a map to commemorate and share any journey large or small, far afield or close to home.</p>
 
- 					</div>
- 				</div>
- 			</div>
- 			<div class="login">
- 				<%= image_tag "icon.png", {:style=>"margin-top: 175px"} %>
- 			</div>
- 			<div class="copyright">
- 				<p>Copyright 2012 Strabo, LLC | HandBaked in Vermont</p>
- 			</div>
- 			<div class="button0">
- 			</div>
- 			<div class="button">
- 				<p> Tell me more</p>
- 			</div>
- 		</div>	
+			</div>
+		</div>
+	</div>
+	<div class="login">
+		<%= image_tag "icon.png", {:style=>"margin-top: 175px"} %>
+	</div>
+	<div class="copyright">
+		<p>Copyright 2012 Strabo, LLC | HandBaked in Vermont</p>
+	</div>
+	<%= link_to "Tell me more", about_path, :class => "button" %>
+</div>
