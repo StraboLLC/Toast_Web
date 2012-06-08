@@ -1,3 +1,5 @@
+<% head_assets 'albums' %>
+<%= render :partial => "layouts/topbar" %>
 <h1>Create a new Album</h1>
 
 <%= form_for(@album,:url => { :action => "create" }) do |f| %>
@@ -14,12 +16,10 @@
 <% end %>
 
 <div class="field">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :placeholder => :name.capitalize %>
 </div>  
 <div class="field">
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, :placeholder => :description.capitalize %>
 </div>
 <div class="actions">
   <%= f.submit %>

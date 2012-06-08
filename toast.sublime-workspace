@@ -295,18 +295,79 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1833,
+				"buffer_size": 1009,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<h1>Toast</h1>\n",
 			"file": "app/views/home/index.html.erb",
-			"file_size": 14,
-			"file_write_time": 1338933787000000,
 			"settings":
 			{
-				"buffer_size": 15,
+				"buffer_size": 803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/home_controller.rb",
+			"settings":
+			{
+				"buffer_size": 151,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 408,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/albums_controller.rb",
+			"settings":
+			{
+				"buffer_size": 817,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/application.css.scss",
+			"settings":
+			{
+				"buffer_size": 3405,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/albums/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/session_controller.rb",
+			"settings":
+			{
+				"buffer_size": 417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/users.css.scss",
+			"settings":
+			{
+				"buffer_size": 538,
 				"line_ending": "Unix"
 			}
 		}
@@ -571,9 +632,14 @@
 	},
 	"file_history":
 	[
-		"/Users/williampotter/github/toast/app/assets/images/rails.png",
 		"/Users/williampotter/github/toast/Gemfile",
+		"/Users/williampotter/Downloads/chriseppstein-compass-f562f48/frameworks/compass/stylesheets/_lemonade.scss",
+		"/Users/williampotter/github/toast/config/application.rb",
+		"/Users/williampotter/github/toast/config/compass.rb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/_normalize.css.scss",
+		"/Users/williampotter/github/toast/README.md",
 		"/Users/williampotter/github/toast/README.rdoc",
+		"/Users/williampotter/github/toast/app/assets/images/rails.png",
 		"/Users/williampotter/github/toast/toast.sublime-project",
 		"/Users/williampotter/bin/ramble",
 		"/Users/williampotter/github/rambl.it/.htaccess",
@@ -693,12 +759,7 @@
 		"/Volumes/wspotter/public_html/cs312-page/course.html",
 		"/Volumes/wspotter/public_html/cs312-page/style.css",
 		"/Volumes/wspotter/public_html/cs312/hw4/ratings.html",
-		"/Volumes/wspotter/public_html/cs312/hw4/ratings1.css",
-		"/Volumes/wspotter/public_html/cs312/hw4/ratings2.css",
-		"/Users/williampotter/Downloads/Cylinder.java",
-		"/Users/williampotter/Downloads/Camera.java",
-		"/Volumes/wspotter/Documents/cs461/index.php",
-		"/Users/williampotter/Downloads/hw2/ray/Scene.java"
+		"/Volumes/wspotter/public_html/cs312/hw4/ratings1.css"
 	],
 	"find":
 	{
@@ -928,7 +989,6 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
@@ -936,15 +996,15 @@
 					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 1833,
+						"buffer_size": 1009,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								646,
+								646
 							]
 						],
 						"settings":
@@ -966,15 +1026,102 @@
 					"file": "app/views/home/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 15,
+						"buffer_size": 803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/home_controller.rb",
+					"settings":
+					{
+						"buffer_size": 151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/users/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
 							]
 						],
 						"settings":
@@ -983,6 +1130,152 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/albums_controller.rb",
+					"settings":
+					{
+						"buffer_size": 817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								271
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/stylesheets/application.css.scss",
+					"settings":
+					{
+						"buffer_size": 3405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1484,
+								1484
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 463.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/albums/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/controllers/session_controller.rb",
+					"settings":
+					{
+						"buffer_size": 417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/assets/stylesheets/users.css.scss",
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								417,
+								417
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

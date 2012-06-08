@@ -1,3 +1,33 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#album-list {
+	margin:0;
+	padding:0;
+	a {
+		width:290px;
+		text-align:center;
+		display:inline-block;
+		font-family:"Museo Sans","Helvetica Neue",sans-serif;
+		svg {
+			display:block;
+			width:290px;
+		}
+		span.album-name {
+			font-size:18px;
+			color:#d3d3d3;
+			width:290px;
+			display:block;
+		}
+		span.album-date {
+			color:#8f8f8f;
+			font-size:12px;
+		}
+		&:hover {
+            background:transparent;
+		}
+	}
+}

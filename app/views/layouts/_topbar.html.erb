@@ -1,0 +1,11 @@
+<div id="nav-bar" class="nav-bar top-bar">
+	<div id="left-nav" class="left-nav">
+		<%= @top_string %>
+	</div>	
+	<a id="center-logo" class="center-logo" href="<%= root_url %>"></a>
+	<div id="right-nav" class="right-nav">
+		<%= link_to "Account", account_path %>
+		<%= link_to "Logout", logout_path %>
+		<%= link_to "Privacy", profile_path %>
+	</div>
+</div>
