@@ -1,2 +1,7 @@
 <% head_assets 'users' %>
 <%= render :partial => "layouts/topbar" %>
+<div id="main-section" class="main-section section">
+	<h1>Edit Your Profile</h1>
+	<% @action = "update" %>
+	<%= render "form" %>
+</div>

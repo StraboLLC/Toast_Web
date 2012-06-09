@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120607210203) do
+ActiveRecord::Schema.define(:version => 20120608141452) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(:version => 20120607210203) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
-    t.integer  "zip"
     t.datetime "paid_at"
     t.datetime "expires_at"
     t.string   "password_digest"
+    t.string   "zip"
   end
 
   create_table "videos", :force => true do |t|

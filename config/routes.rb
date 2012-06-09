@@ -3,14 +3,17 @@ Toast::Application.routes.draw do
 
 
   # User Routes
+
+  # User's Home Page
   match "/me" => "users#index", :as => :profile
+  # Creates a User
   post "/u" => "users#create"
-  get "/u/new" => "users#new", :as => :new_user
-  get "/u/:id/edit" => "users#edit", :as => :edit_user
-  put "/u/:id" => "users#update", :as => :update_user
-  delete "/u/:id" => "users#destroy", :as => :delete_user
+  put "/update" => "users#update", :as => :update_user
+  # Shows the form to register a user
   match "/register" => "users#register", :as => :register_user
+  # Shows the form to login
   match "/login" => "users#login", :as => :login_user
+  # Shows the form to edit a user's account
   match "/account" => "users#account", :as => :account
 
   # Album Routes
@@ -30,6 +33,7 @@ Toast::Application.routes.draw do
   match "login" => "users#login"
 
   # Routes
+  get "/privacy" => "home#privacy", :as => :privacy
   get "/users" => redirect('/')
   root :to => "home#index"
 

@@ -10,4 +10,7 @@ class HomeController < ApplicationController
 			
 
 	end
+	def privacy
+		@top_string = "Our Policy on Privacy"
+	end
 end

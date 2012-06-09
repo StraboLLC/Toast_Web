@@ -1,2 +1,22 @@
-<% head_assets 'users' %>
+<% head_assets 'albums' %>
+<%= content_for(:head) { stylesheet_link_tag "leaflet" }%>
+<%= content_for(:head) { javascript_include_tag "leaflet" }%>
+<%= content_for(:head) { javascript_include_tag "wax.leaf.min" }%>
 <%= render :partial => "layouts/topbar" %>
+<div id="content-box" class="content-box">
+	<div id="map-box" class="map-box">
+		
+	</div>
+	<div id="viewer-box" class="viewer-box">
+		
+	</div>
+</div>
+<div id="media-gallery">
+	<% if @album.all_media.empty? %>
+		<div id="album-preview" class="album-preview">You haven't uploaded any pictures or video yet?? WTF...</div>
+	<% else %>
+		<% @album.all_media.each do |a| %>
+			<div id="album-preview" class="album-preview"></div>
+		<% end %>
+	<% end %>
+</div>

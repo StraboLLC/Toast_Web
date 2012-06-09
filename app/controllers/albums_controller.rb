@@ -1,4 +1,3 @@
-require "digest"
 # Controls all of the albums that a user uploads.
 class AlbumsController < ApplicationController
 	# Show a user's albums.
@@ -27,7 +26,7 @@ class AlbumsController < ApplicationController
 			@user = User.find_by_id(session[:user_id])
 		end
 		@album = Album.find_by_album_token(params[:album_token])
-		@top_string=@album.name
+		@top_string=@album.name+" by "+@user.first_name+" "+@user.last_name
 
 
 	end
@@ -38,7 +37,7 @@ class AlbumsController < ApplicationController
 			@album.user_id = session[:user_id]
 			hash = @album.user_id.to_s+Time.now.to_i.to_s
 			@user = User.find_by_id(session[:user_id] )
-			@album.album_token = Digest::MD5.hexdigest(hash).to_s
+			@album.album_token = md5(hash)
 			if @album.save
 				redirect_to profile_path
 			else
