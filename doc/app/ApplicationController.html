@@ -64,7 +64,17 @@
 </nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-i-md5">#md5</a>
+    
+  </ul>
+</nav>
+
   </div>
 
   <div id="project-metadata">
@@ -93,13 +103,15 @@
   
     <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
   
+    <li><a href="./Capture.html">Capture</a>
+  
     <li><a href="./HomeController.html">HomeController</a>
   
     <li><a href="./HomeHelper.html">HomeHelper</a>
   
-    <li><a href="./Object.html">Object</a>
+    <li><a href="./MobileApiController.html">MobileApiController</a>
   
-    <li><a href="./Photo.html">Photo</a>
+    <li><a href="./MobileApiHelper.html">MobileApiHelper</a>
   
     <li><a href="./SessionController.html">SessionController</a>
   
@@ -110,8 +122,6 @@
     <li><a href="./UsersController.html">UsersController</a>
   
     <li><a href="./UsersHelper.html">UsersHelper</a>
-  
-    <li><a href="./Video.html">Video</a>
   
   </ul>
 </nav>
@@ -140,6 +150,42 @@
 
     <!-- Methods -->
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-md5" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">md5</span><span
+            class="method-args">(hash)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Hashes a String and Returns an MD5 String</p>
+          
+
+          
+          <div class="method-source-code" id="md5-source">
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">md5</span> <span class="ruby-identifier">hash</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">hash</span>).<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- md5-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- md5-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
   </section><!-- 5Buntitled-5D -->
 
 </div><!-- documentation -->

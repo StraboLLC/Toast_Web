@@ -70,14 +70,6 @@
 
   <ul class="link-list">
     
-    <li><a href="#method-i-create">#create</a>
-    
-    <li><a href="#method-i-destroy">#destroy</a>
-    
-    <li><a href="#method-i-index">#index</a>
-    
-    <li><a href="#method-i-new">#new</a>
-    
     <li><a href="#method-i-show">#show</a>
     
   </ul>
@@ -111,13 +103,15 @@
   
     <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
   
+    <li><a href="./Capture.html">Capture</a>
+  
     <li><a href="./HomeController.html">HomeController</a>
   
     <li><a href="./HomeHelper.html">HomeHelper</a>
   
-    <li><a href="./Object.html">Object</a>
+    <li><a href="./MobileApiController.html">MobileApiController</a>
   
-    <li><a href="./Photo.html">Photo</a>
+    <li><a href="./MobileApiHelper.html">MobileApiHelper</a>
   
     <li><a href="./SessionController.html">SessionController</a>
   
@@ -128,8 +122,6 @@
     <li><a href="./UsersController.html">UsersController</a>
   
     <li><a href="./UsersHelper.html">UsersHelper</a>
-  
-    <li><a href="./Video.html">Video</a>
   
   </ul>
 </nav>
@@ -164,153 +156,6 @@
       <h3 class="section-header">Public Instance Methods</h3>
 
     
-      <div id="method-i-create" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">create</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Processes the creation of a new album</p>
-          
-
-          
-          <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 35</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
-                <span class="ruby-ivar">@album</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:album</span>]
-                <span class="ruby-ivar">@album</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
-                <span class="ruby-identifier">hash</span> = <span class="ruby-ivar">@album</span>.<span class="ruby-identifier">user_id</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span>
-                <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] )
-                <span class="ruby-ivar">@album</span>.<span class="ruby-identifier">album_token</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">hash</span>).<span class="ruby-identifier">to_s</span>
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@album</span>.<span class="ruby-identifier">save</span>
-                        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">profile_path</span>
-                <span class="ruby-keyword">else</span>
-                        <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span>
-                <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">else</span> 
-                <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_url</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- create-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- create-method -->
-
-    
-      <div id="method-i-destroy" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">destroy</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 52</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
-
-
-
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- destroy-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- destroy-method -->
-
-    
-      <div id="method-i-index" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">index</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Show a user’s albums.</p>
-          
-
-          
-          <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 5</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
-        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
-                <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] )
-                <span class="ruby-ivar">@albums</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) <span class="ruby-operator">||</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;index&quot;</span>
-        <span class="ruby-keyword">else</span> 
-                <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_url</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- index-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- index-method -->
-
-    
-      <div id="method-i-new" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">new</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Create a new <a href="Album.html">Album</a></p>
-          
-
-          
-          <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 15</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
-        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
-                <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
-                <span class="ruby-ivar">@album</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">new</span>
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_url</span>
-        <span class="ruby-keyword">end</span>
-
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- new-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- new-method -->
-
-    
       <div id="method-i-show" class="method-detail ">
         
         <div class="method-heading">
@@ -327,13 +172,14 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 25</span>
+            <pre><span class="ruby-comment"># File app/controllers/albums_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
                 <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
         <span class="ruby-keyword">end</span>
         <span class="ruby-ivar">@album</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">find_by_album_token</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:album_token</span>])
-        <span class="ruby-ivar">@top_string</span>=<span class="ruby-ivar">@album</span>.<span class="ruby-identifier">name</span>
+        <span class="ruby-ivar">@top_string</span>=<span class="ruby-ivar">@album</span>.<span class="ruby-identifier">name</span><span class="ruby-operator">+</span><span class="ruby-string">&quot; by &quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@user</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">%r(\W)/</span>).<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:capitalize</span>).<span class="ruby-identifier">join</span>
+
 
 
 <span class="ruby-keyword">end</span></pre>

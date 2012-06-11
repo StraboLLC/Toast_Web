@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 		if session[:user_id]
 			@user = User.find_by_id(session[:user_id] )
 			@albums = Album.where("user_id" => session[:user_id]) 
-			@top_string = @user.first_name.capitalize+"'s Albums"
+			@top_string = @user.name.split(/(\W)/).map(&:capitalize).join+"'s Albums"
 			@albums ||= Array.new
 		else 
 			redirect_to root_path
@@ -21,7 +21,6 @@ class UsersController < ApplicationController
 	# Shows the register page
 	def register
 		@user = User.new
-
 		respond_to do |format|
 			format.html
 			format.json { render json: @user }
@@ -36,28 +35,33 @@ class UsersController < ApplicationController
 			redirect_to root_path
 		end
 	end
+	##
+	# Renders the form for payment.
+	def payment
+
+
+	end
 	# Inserts a new user into the database
 	def create
 		@user = User.new(params[:user])
+		@user.password = md5 @user.password 
+		if @user.save
 
-		respond_to do |format|
-		  if @user.save
-
-		  else
-		    format.html { render action: "new" }
-		    format.json { render json: @user.errors, status: :unprocessable_entity }
-		  end
+		else
+			render action: "new"
 		end
 	end
 	# Updates a user's attributes in the database.
 	def update
-		@user = User.find(session[:user_id])
-		if @user.update_attributes(params[:user])
-			redirect_to profile_path, notice: 'User was successfully updated.'
-		else
-			render action: "account"
+		if session[:user_id]
+			@user = User.find(session[:user_id])
+			@user.attributes = params[:user]
+			@user.password = md5 (@user.password)
+			if @user.save
+				redirect_to profile_path, notice: 'User was successfully updated.'
+			else
+				render action: "account"
+			end
 		end
-		
-
 	end
 end

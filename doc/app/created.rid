@@ -1,16 +1,17 @@
-Thu, 07 Jun 2012 21:42:58 -0400
+Sun, 10 Jun 2012 11:00:04 -0400
 doc/README_FOR_APP	Tue, 05 Jun 2012 12:23:22 -0400
-app/controllers/albums_controller.rb	Thu, 07 Jun 2012 17:41:29 -0400
-app/controllers/application_controller.rb	Wed, 06 Jun 2012 16:16:49 -0400
-app/controllers/home_controller.rb	Wed, 06 Jun 2012 21:44:49 -0400
+app/controllers/albums_controller.rb	Sat, 09 Jun 2012 16:07:15 -0400
+app/controllers/application_controller.rb	Sat, 09 Jun 2012 15:36:09 -0400
+app/controllers/home_controller.rb	Thu, 07 Jun 2012 22:44:27 -0400
+app/controllers/mobile_api_controller.rb	Sun, 10 Jun 2012 10:59:45 -0400
 app/controllers/session_controller.rb	Thu, 07 Jun 2012 10:17:52 -0400
-app/controllers/users_controller.rb	Thu, 07 Jun 2012 21:40:19 -0400
+app/controllers/users_controller.rb	Sat, 09 Jun 2012 16:07:21 -0400
 app/helpers/albums_helper.rb	Wed, 06 Jun 2012 15:54:26 -0400
-app/helpers/application_helper.rb	Tue, 05 Jun 2012 12:23:22 -0400
+app/helpers/application_helper.rb	Sat, 09 Jun 2012 15:36:04 -0400
 app/helpers/home_helper.rb	Tue, 05 Jun 2012 17:59:09 -0400
+app/helpers/mobile_api_helper.rb	Sat, 09 Jun 2012 14:58:28 -0400
 app/helpers/session_helper.rb	Wed, 06 Jun 2012 16:17:53 -0400
 app/helpers/users_helper.rb	Wed, 06 Jun 2012 09:44:30 -0400
-app/models/album.rb	Wed, 06 Jun 2012 14:34:46 -0400
-app/models/photo.rb	Wed, 06 Jun 2012 14:34:31 -0400
-app/models/user.rb	Wed, 06 Jun 2012 16:41:03 -0400
-app/models/video.rb	Wed, 06 Jun 2012 14:34:25 -0400
+app/models/album.rb	Sat, 09 Jun 2012 16:09:59 -0400
+app/models/capture.rb	Sat, 09 Jun 2012 15:54:33 -0400
+app/models/user.rb	Sat, 09 Jun 2012 16:09:10 -0400

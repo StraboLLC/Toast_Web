@@ -1,3 +1,4 @@
-<% head_assets 'users' %>
+<%=	content_for(:head) { javascript_include_tag("users") } %>
+<%=	content_for(:head) { stylesheet_link_tag("users") } %>
 <h1>Users#logout</h1>
 <p>Find me in app/views/users/logout.html.erb</p>

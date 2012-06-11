@@ -113,13 +113,15 @@
   
     <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
   
+    <li><a href="./Capture.html">Capture</a>
+  
     <li><a href="./HomeController.html">HomeController</a>
   
     <li><a href="./HomeHelper.html">HomeHelper</a>
   
-    <li><a href="./Object.html">Object</a>
+    <li><a href="./MobileApiController.html">MobileApiController</a>
   
-    <li><a href="./Photo.html">Photo</a>
+    <li><a href="./MobileApiHelper.html">MobileApiHelper</a>
   
     <li><a href="./SessionController.html">SessionController</a>
   
@@ -130,8 +132,6 @@
     <li><a href="./UsersController.html">UsersController</a>
   
     <li><a href="./UsersHelper.html">UsersHelper</a>
-  
-    <li><a href="./Video.html">Video</a>
   
   </ul>
 </nav>
@@ -259,7 +259,7 @@
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
                 <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] )
                 <span class="ruby-ivar">@albums</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;user_id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) 
-                <span class="ruby-ivar">@top_string</span> = <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">first_name</span>.<span class="ruby-identifier">capitalize</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;'s Albums&quot;</span>
+                <span class="ruby-ivar">@top_string</span> = <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">%r(\W)/</span>).<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:capitalize</span>).<span class="ruby-identifier">join</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;'s Albums&quot;</span>
                 <span class="ruby-ivar">@albums</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-keyword">else</span> 
                 <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>

@@ -1,4 +1,5 @@
-<% head_assets 'users' %>
+<%=	content_for(:head) { javascript_include_tag("users") } %>
+<%=	content_for(:head) { stylesheet_link_tag("users") } %>
 <h1>Register</h1>
 <% @action = "create" %>
 <%= render "form" %>

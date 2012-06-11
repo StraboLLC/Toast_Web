@@ -1,19 +1,20 @@
-<% head_assets 'users' %>
+<%=	content_for(:head) { javascript_include_tag("users") } %>
+<%=	content_for(:head) { stylesheet_link_tag("users") } %>
 <%= render :partial => "layouts/topbar" %>
 <div id="content" class="content main">
 	<% if @albums.size > 0 %>
-		<div id="album-list" class="list albumlist">
-			<% @albums.each do |a| %>
-				<a href="/album/<%= a.album_token %>"><%= render :partial => "albums/"+a.appearance+"-album" %>
-					<span class="album-name"><%= a.name %></span>
-					<span class="album-date"><%= a.created_at.strftime("%m/%Y")  %></span>
-				</a>
-			<% end %>
-		</div>
+	<div id="album-list" class="list albumlist">
+		<% @albums.each do |a| %>
+		<a href="/album/<%= a.album_token %>"><%= render :partial => "albums/"+a.appearance+"-album" %>
+			<span class="album-name"><%= a.name %></span>
+			<span class="album-date"><%= a.created_at.strftime("%m/%Y")  %></span>
+		</a>
+		<% end %>
+	</div>
 	<% else %>
-	<p>You have not recorded any tracks.</p>
+	<p>You have not created any albums.</p>
 
 	<% end %>
-	<p>Would you like to <%= link_to "create an album", new_album_path %>?</p>
+	<p><%= link_to "Download our application and start creating albums!", "#" %></p>
 
 </div>

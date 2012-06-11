@@ -1,4 +1,5 @@
-<% head_assets 'albums' %>
+<%= content_for(:head) { javascript_include_tag("albums") } %>
+<%= content_for(:head) { stylesheet_link_tag("albums") } %>
 <%= render :partial => "layouts/topbar" %>
 <h1>Create a new Album</h1>
 

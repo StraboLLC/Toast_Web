@@ -1,4 +1,5 @@
-<% head_assets 'home' %>
+<%=	content_for(:head) { javascript_include_tag("home") } %>
+<%=	content_for(:head) { stylesheet_link_tag("home") } %>
 <%= render :partial => "layouts/topbar" %>
 <div id="main-section" class="main-section section">
 	<p>You shouldn't need to worry about who can see what you post on the internet. It is no secret that many services profit off of your personal information by selling information to third party companies, without your knowledge. They provide these services for free so that other companies can pay to have access to your personal information.</p>

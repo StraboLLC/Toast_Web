@@ -1,4 +1,5 @@
-<% head_assets 'home' %>
+<%=	content_for(:head) { javascript_include_tag("home") } %>
+<%=	content_for(:head) { stylesheet_link_tag("home") } %>
 <div id="front-page" class="front-page">
 	<div class="welcome">
 		<p>Toast helps you share your journeys with people you care about.</p>

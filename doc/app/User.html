@@ -64,7 +64,17 @@
 </nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-i-albums">#albums</a>
+    
+  </ul>
+</nav>
+
   </div>
 
   <div id="project-metadata">
@@ -93,13 +103,15 @@
   
     <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
   
+    <li><a href="./Capture.html">Capture</a>
+  
     <li><a href="./HomeController.html">HomeController</a>
   
     <li><a href="./HomeHelper.html">HomeHelper</a>
   
-    <li><a href="./Object.html">Object</a>
+    <li><a href="./MobileApiController.html">MobileApiController</a>
   
-    <li><a href="./Photo.html">Photo</a>
+    <li><a href="./MobileApiHelper.html">MobileApiHelper</a>
   
     <li><a href="./SessionController.html">SessionController</a>
   
@@ -110,8 +122,6 @@
     <li><a href="./UsersController.html">UsersController</a>
   
     <li><a href="./UsersHelper.html">UsersHelper</a>
-  
-    <li><a href="./Video.html">Video</a>
   
   </ul>
 </nav>
@@ -124,6 +134,10 @@
 
   <div id="description" class="description">
     
+<p>The model that holds information about a user. A user is defined as someone
+with a login account/password name. Note: It is possible to view albums
+without a username, provided you have been given the link.</p>
+
   </div><!-- description -->
 
   
@@ -140,6 +154,42 @@
 
     <!-- Methods -->
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-albums" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">albums</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a user’s albums</p>
+          
+
+          
+          <div class="method-source-code" id="albums-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">albums</span> 
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Album</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- albums-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- albums-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
   </section><!-- 5Buntitled-5D -->
 
 </div><!-- documentation -->

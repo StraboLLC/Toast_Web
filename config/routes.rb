@@ -6,22 +6,15 @@ Toast::Application.routes.draw do
 
   # User's Home Page
   match "/me" => "users#index", :as => :profile
-  # Creates a User
   post "/u" => "users#create"
   put "/update" => "users#update", :as => :update_user
-  # Shows the form to register a user
   match "/register" => "users#register", :as => :register_user
-  # Shows the form to login
   match "/login" => "users#login", :as => :login_user
-  # Shows the form to edit a user's account
   match "/account" => "users#account", :as => :account
 
   # Album Routes
-  get "player/index"
-  get "albums/index"
+
   match "/album/:album_token" => "albums#show", :as => :album
-  post "/a" => "albums#create"
-  match '/albums/new' => 'albums#new', :as => :new_album
 
   # Session Routes
   match "session/create", :as => :session
@@ -31,6 +24,15 @@ Toast::Application.routes.draw do
   match "/about" => "home#about"
   match "register" => "users#register"
   match "login" => "users#login"
+
+
+  # Mobile API
+  match "/mobile/api/register/" => "mobile_api#register", :as => :mobile_register
+  match "/mobile/api/login/" => "mobile_api#login", :as => :mobile_login
+  match "/mobile/api/upload/" => "mobile_api#upload", :as => :mobile_upload
+  match "/mobile/api/sync/" => "mobile_api#sync", :as => :mobile_sync
+
+
 
   # Routes
   get "/privacy" => "home#privacy", :as => :privacy

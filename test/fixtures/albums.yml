@@ -2,8 +2,14 @@
 
 one:
   name: MyString
-  description: MyText
+  public: false
+  cover: MyString
+  uploaded_at: 2012-06-09 15:49:19
+  token: MyString
 
 two:
   name: MyString
-  description: MyText
+  public: false
+  cover: MyString
+  uploaded_at: 2012-06-09 15:49:19
+  token: MyString

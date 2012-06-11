@@ -3,11 +3,17 @@
 #
 class User < ActiveRecord::Base
 	has_many :albums
+	has_many :captures, :through => :albums
 	validates :email, presence: true, uniqueness: true
-	has_secure_password
+	validates :password, presence: true
 
 	# Returns a user's albums
-	def self.albums 
-		return Album.find_by_user_id(self.id)
+	def albums 
+		return Album.find_by_user_id(@id)
 	end
+	def self.authenticate(email,password)
+		User.where(:email => email, :password => password).first
+	end
+
+
 end
