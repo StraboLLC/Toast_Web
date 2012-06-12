@@ -6,7 +6,8 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # Use the Amazon SDK for storing files
-gem 'aws-s3'
+gem 'aws-s3', :require => 'aws/s3'
+
 
 # Use Panda for Video Encoding
 gem 'panda'
@@ -25,22 +26,9 @@ gem 'json'
 group :assets do
 
 	gem 'sass-rails', '~> 3.2.3'
-	#gem 'coffee-rails', '~> 3.2.1'
-
-	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-	# gem 'therubyracer'
-
 	gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-
-
-end
-
-group :production do
-
-end
 
 gem 'jquery-rails'
 
