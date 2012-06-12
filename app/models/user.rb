@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 	has_many :captures, :through => :albums
 	validates :email, presence: true, uniqueness: true
 	validates :password, presence: true
-
+	attr_accessible :name, :email, :password, :address, :city, :zip, :state
 	def self.authenticate(email,password)
 		User.where(:email => email, :password => password).first
 	end

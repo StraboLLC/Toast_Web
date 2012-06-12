@@ -16,7 +16,6 @@ gem 'panda'
 
 
 #Use the sqlite database by default
-gem 'sqlite3'
 gem 'pg'
 
 gem 'json'

@@ -44,6 +44,7 @@ class UsersController < ApplicationController
 	# Inserts a new user into the database
 	def create
 		@user = User.new(params[:user])
+		puts @user.to_json
 		@user.password = md5 @user.password 
 		if @user.save
 			redirect_to login_path
