@@ -19,7 +19,7 @@ class MobileApiController < ApplicationController
 				@r.user_id = @user.id
 				@r.token = md5(@user.id.to_s + "g04ts")
 			else
-				@r = MobileApiError.new 3, @user.errors
+				@r = MobileApiError.new 3
 			end
 		else
 			@r = MobileApiError.new 1
@@ -34,7 +34,7 @@ class MobileApiController < ApplicationController
 	# +user_id+, +error_present+, +token+, +error_number+
 	# ==== Example
 	# <code>POST /mobile/api/login/?name=NAME&email=EMAIL&password=PASSWORD&token=TOKEN</code>
-	# curl -d "email=will@willpots.com&token=ccd7d3b0471697aa2e9d10968c74e8b0&password=1f3870be274f6c49b3e31a0c6728957f" http://localhost:3000/mobile/api/login
+	# curl -d "email=will@willpots.com&token=903a04b16a8280ed082936d534adc6f9&password=1f3870be274f6c49b3e31a0c6728957f" http://localhost:3000/mobile/api/login
 	def login
 		if params[:token]==md5(params[:email].to_s+"fuckch0p")
 			@user = User.authenticate params[:email], params[:password]
@@ -43,7 +43,7 @@ class MobileApiController < ApplicationController
 				@r.user_id = @user.id
 				@r.token = md5(@user.id.to_s + "g04ts")
 			else
-				@r = MobileApiError.new 3, @user.errors
+				@r = MobileApiError.new 3
 			end
 		else
 			@r = MobileApiError.new 1
