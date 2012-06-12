@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 	# Hashes a String and Returns an MD5 String
 	def md5 hash
-		return Digest::MD5.hexdigest(hash).to_s
+		return Digest::MD5.hexdigest(hash.to_s).to_s
 	end
 end
 
