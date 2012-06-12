@@ -5,7 +5,7 @@
 	<% if @albums.size > 0 %>
 	<div id="album-list" class="list albumlist">
 		<% @albums.each do |a| %>
-		<a href="/album/<%= a.album_token %>"><%= render :partial => "albums/"+a.appearance+"-album" %>
+		<a href="/album/<%= a.token %>"><%= render :partial => "albums/"+a.cover+"-album" %>
 			<span class="album-name"><%= a.name %></span>
 			<span class="album-date"><%= a.created_at.strftime("%m/%Y")  %></span>
 		</a>

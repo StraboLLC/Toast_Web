@@ -1,9 +1,14 @@
 {
 	"title": "Central Woodstock",
-	"token": "f450ca989145477cc23376a212ac0428",
-	"coords": [43.6271, -72.516],
-	"description": "Here I am overlooking the Woodstock Town Green.",
-	"created_at": "1339500754",
-	"uploaded_at": "",
-	"media_type": "Photo"
-}
+	"public":false,
+	"album_token": "f450ca989145477cc23376a212ac0428",
+	"album_cover": "red",
+	"capture": {
+		"title": "Woodstock Green",
+		"capture_token": "fbf7ddb41122727a05725ddc5ef28498",
+		"coords": [43.6271, -72.516],
+		"description": "An awesome view of the Woodstock Town Green just before Sunset.",
+		"media_type": "video",
+		"created_at": "1339500754"
+	}
+}	

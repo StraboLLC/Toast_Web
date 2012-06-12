@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		@user.password = md5 @user.password 
 		if @user.save
-
+			redirect_to login_path
 		else
 			render action: "new"
 		end

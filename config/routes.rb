@@ -32,7 +32,8 @@ Toast::Application.routes.draw do
   match "/mobile/api/upload/" => "mobile_api#upload", :as => :mobile_upload
   match "/mobile/api/sync/" => "mobile_api#sync", :as => :mobile_sync
 
-
+  # Encoding Notifications
+  post "/notifications/finish/" => "notification#finsh"
 
   # Routes
   get "/privacy" => "home#privacy", :as => :privacy

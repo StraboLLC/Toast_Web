@@ -7,10 +7,6 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, uniqueness: true
 	validates :password, presence: true
 
-	# Returns a user's albums
-	def albums 
-		return Album.find_by_user_id(@id)
-	end
 	def self.authenticate(email,password)
 		User.where(:email => email, :password => password).first
 	end

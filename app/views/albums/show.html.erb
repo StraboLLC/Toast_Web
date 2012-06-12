@@ -13,11 +13,14 @@
 	</div>
 </div>
 <div id="media-gallery">
-	<% if @album.all_media.empty? %>
+	<% @captures = @album.captures %>
+	<% if @captures.nil? %>
 		<div id="album-preview" class="album-preview">You haven't uploaded any pictures or video yet?? WTF...</div>
 	<% else %>
-		<% @album.all_media.each do |a| %>
-			<div id="album-preview" class="album-preview"></div>
+		<% @captures.each do |a| %>
+			<div id="album-preview" class="album-preview">
+				<img src="http://s3.amazonaws.com/<%= ENV['AMAZON_TOAST_BUCKET'] %>/<%= a.token %>/<%= a.token %>_1.jpg" alt="Thumbnail" />
+			</div>
 		<% end %>
 	<% end %>
 </div>

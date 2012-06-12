@@ -1,1 +1,227 @@
-{"error_present":false,"error_number":0}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Action Controller: Exception caught</title>
+  <style>
+    body { background-color: #fff; color: #333; }
+
+    body, p, ol, ul, td {
+      font-family: helvetica, verdana, arial, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+      white-space: pre-wrap;
+    }
+
+    a { color: #000; }
+    a:visited { color: #666; }
+    a:hover { color: #fff; background-color:#000; }
+  </style>
+</head>
+<body>
+
+<h1>
+  NoMethodError
+    in MobileApiController#upload
+</h1>
+<pre>undefined method `id' for #&lt;ActiveRecord::Relation:0x007f88edb33008&gt;</pre>
+
+
+<p><code>Rails.root: /Users/williampotter/github/toast</code></p>
+
+<div id="traces">
+    <a href="#" onclick="document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Application-Trace').style.display='block';; return false;">Application Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='block';; return false;">Framework Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='block';; return false;">Full Trace</a> 
+
+    <div id="Application-Trace" style="display: block;">
+      <pre><code>app/controllers/mobile_api_controller.rb:99:in `upload'</code></pre>
+    </div>
+    <div id="Framework-Trace" style="display: none;">
+      <pre><code>activerecord (3.2.2) lib/active_record/relation/delegation.rb:45:in `method_missing'
+actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__374621278953724712__process_action__985899154829926042__callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+journey (1.0.3) lib/journey/router.rb:56:in `each'
+journey (1.0.3) lib/journey/router.rb:56:in `call'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+rack (1.4.1) lib/rack/etag.rb:23:in `call'
+rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__3548799213670552292__call__2633469849571111946__callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.4.1) lib/rack/lock.rb:15:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+railties (3.2.2) lib/rails/engine.rb:479:in `call'
+railties (3.2.2) lib/rails/application.rb:220:in `call'
+rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'</code></pre>
+    </div>
+    <div id="Full-Trace" style="display: none;">
+      <pre><code>activerecord (3.2.2) lib/active_record/relation/delegation.rb:45:in `method_missing'
+app/controllers/mobile_api_controller.rb:99:in `upload'
+actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__374621278953724712__process_action__985899154829926042__callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+journey (1.0.3) lib/journey/router.rb:56:in `each'
+journey (1.0.3) lib/journey/router.rb:56:in `call'
+actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+rack (1.4.1) lib/rack/etag.rb:23:in `call'
+rack (1.4.1) lib/rack/conditionalget.rb:35:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__3548799213670552292__call__2633469849571111946__callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.4.1) lib/rack/lock.rb:15:in `call'
+actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+railties (3.2.2) lib/rails/engine.rb:479:in `call'
+railties (3.2.2) lib/rails/application.rb:220:in `call'
+rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/williampotter/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'</code></pre>
+    </div>
+</div>
+
+
+
+<h2 style="margin-top: 30px">Request</h2>
+<p><b>Parameters</b>: <pre>{&quot;email&quot;=&gt;&quot;will@willpots.com&quot;,
+ &quot;token&quot;=&gt;&quot;903a04b16a8280ed082936d534adc6f9&quot;,
+ &quot;capture_info&quot;=&gt;#&lt;ActionDispatch::Http::UploadedFile:0x007f88ecccee40 @original_filename=&quot;sample_info.json&quot;,
+ @content_type=&quot;application/json&quot;,
+ @headers=&quot;Content-Disposition: form-data; name=\&quot;capture_info\&quot;; filename=\&quot;sample_info.json\&quot;\r\nContent-Type: application/json\r\n&quot;,
+ @tempfile=#&lt;File:/var/folders/3z/k9kv9g0s0lxgqhblq7n420h40000gn/T/RackMultipart20120612-19079-1q4fi3w&gt;&gt;,
+ &quot;media_file&quot;=&gt;#&lt;ActionDispatch::Http::UploadedFile:0x007f88eccceda0 @original_filename=&quot;sample_video.mov&quot;,
+ @content_type=&quot;video/quicktime&quot;,
+ @headers=&quot;Content-Disposition: form-data; name=\&quot;media_file\&quot;; filename=\&quot;sample_video.mov\&quot;\r\nContent-Type: video/quicktime\r\n&quot;,
+ @tempfile=#&lt;File:/var/folders/3z/k9kv9g0s0lxgqhblq7n420h40000gn/T/RackMultipart20120612-19079-nemjxh&gt;&gt;,
+ &quot;geo_data&quot;=&gt;#&lt;ActionDispatch::Http::UploadedFile:0x007f88eccced00 @original_filename=&quot;sample_geo_data.json&quot;,
+ @content_type=&quot;application/json&quot;,
+ @headers=&quot;Content-Disposition: form-data; name=\&quot;geo_data\&quot;; filename=\&quot;sample_geo_data.json\&quot;\r\nContent-Type: application/json\r\n&quot;,
+ @tempfile=#&lt;File:/var/folders/3z/k9kv9g0s0lxgqhblq7n420h40000gn/T/RackMultipart20120612-19079-1nnbc65&gt;&gt;,
+ &quot;thumbnail&quot;=&gt;#&lt;ActionDispatch::Http::UploadedFile:0x007f88ecccec60 @original_filename=&quot;sample_thumbnail.jpg&quot;,
+ @content_type=&quot;image/jpeg&quot;,
+ @headers=&quot;Content-Disposition: form-data; name=\&quot;thumbnail\&quot;; filename=\&quot;sample_thumbnail.jpg\&quot;\r\nContent-Type: image/jpeg\r\n&quot;,
+ @tempfile=#&lt;File:/var/folders/3z/k9kv9g0s0lxgqhblq7n420h40000gn/T/RackMultipart20120612-19079-1mz60mx&gt;&gt;}</pre></p>
+
+<p><a href="#" onclick="document.getElementById('session_dump').style.display='block'; return false;">Show session dump</a></p>
+<div id="session_dump" style="display:none"><pre></pre></div>
+
+<p><a href="#" onclick="document.getElementById('env_dump').style.display='block'; return false;">Show env dump</a></p>
+<div id="env_dump" style="display:none"><pre>GATEWAY_INTERFACE: &quot;CGI/1.1&quot;
+HTTP_ACCEPT: &quot;*/*&quot;
+REMOTE_ADDR: &quot;127.0.0.1&quot;
+REMOTE_HOST: &quot;localhost&quot;
+SERVER_NAME: &quot;localhost&quot;
+SERVER_PROTOCOL: &quot;HTTP/1.1&quot;</pre></div>
+
+
+<h2 style="margin-top: 30px">Response</h2>
+<p><b>Headers</b>: <pre>None</pre></p>
+
+
+
+</body>
+</html>

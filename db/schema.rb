@@ -11,49 +11,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120612153111) do
+ActiveRecord::Schema.define(:version => 20120612202814) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
-    t.boolean  "public"
-    t.string   "cover"
-    t.string   "token"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "user_id"
+    t.boolean  "public",     :default => false
+    t.string   "cover",      :default => "red"
+    t.string   "token",                         :null => false
+    t.integer  "user_id",                       :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.datetime "taken_at"
   end
 
   create_table "captures", :force => true do |t|
-    t.string   "title"
-    t.string   "token"
+    t.string   "title",             :null => false
+    t.string   "token",             :null => false
+    t.text     "description"
     t.decimal  "latitude"
     t.decimal  "longitude"
-    t.text     "description"
     t.string   "media_type"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-    t.integer  "album_id"
     t.string   "job_id"
     t.string   "mp4_id"
     t.string   "webm_id"
+    t.boolean  "encoding_finished"
     t.boolean  "mp4_finished"
     t.boolean  "webm_finished"
-    t.boolean  "encoding_finished"
+    t.datetime "taken_at"
+    t.integer  "album_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "email"
+    t.string   "name",       :null => false
+    t.string   "email",      :null => false
+    t.string   "password",   :null => false
     t.string   "address"
     t.string   "city"
     t.string   "state"
+    t.string   "zip"
     t.datetime "paid_at"
     t.datetime "expires_at"
-    t.string   "zip"
-    t.string   "name"
-    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
