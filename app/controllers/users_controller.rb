@@ -48,7 +48,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to login_path
 		else
-			render action: "new"
+			render action: "register"
 		end
 	end
 	# Updates a user's attributes in the database.
