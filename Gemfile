@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 # Use the Amazon SDK for storing files
 gem 'aws-s3'
+gem 'panda'
 
 #Use the sqlite database by default
 gem 'sqlite3'

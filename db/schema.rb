@@ -11,17 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610192324) do
+ActiveRecord::Schema.define(:version => 20120612153111) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
     t.boolean  "public"
     t.string   "cover"
-    t.datetime "uploaded_at"
     t.string   "token"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "user_id"
+    t.datetime "taken_at"
   end
 
   create_table "captures", :force => true do |t|
@@ -31,9 +31,15 @@ ActiveRecord::Schema.define(:version => 20120610192324) do
     t.decimal  "longitude"
     t.text     "description"
     t.string   "media_type"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.integer  "album_id"
+    t.string   "job_id"
+    t.string   "mp4_id"
+    t.string   "webm_id"
+    t.boolean  "mp4_finished"
+    t.boolean  "webm_finished"
+    t.boolean  "encoding_finished"
   end
 
   create_table "users", :force => true do |t|
