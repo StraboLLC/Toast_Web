@@ -15,7 +15,7 @@ gem 'panda'
 #gem "localtunnel"
 
 
-#Use the pg database by default
+#Use the postgre database by default
 gem 'sqlite3'
 gem 'pg'
 
@@ -43,18 +43,3 @@ group :production do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
