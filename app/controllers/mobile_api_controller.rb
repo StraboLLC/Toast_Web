@@ -194,7 +194,7 @@ class MobileApiController < ApplicationController
 				@error_string = "Could not find given email in database."
 			end
 			if errors
-				@error_string = "Email "+errors[:email][0].to_s if errors[:email]
+				@error_string = errors
 			end
 		end
 	end

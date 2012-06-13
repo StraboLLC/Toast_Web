@@ -9,7 +9,10 @@
 		
 	</div>
 	<div id="viewer-box" class="viewer-box">
-		
+		<video id="video"></video>
+		<div id="photo"></div>
+		<audio id="audio"></audio>
+		<div id="note"></div>
 	</div>
 </div>
 <div id="media-gallery">
@@ -18,7 +21,7 @@
 		<div id="album-preview" class="album-preview">You haven't uploaded any pictures or video yet?? WTF...</div>
 	<% else %>
 		<% @captures.each do |a| %>
-			<div id="album-preview" class="album-preview">
+			<div id="capture-preview-<%= a.token %>" class="capture-preview <%= a.media_type %>" data-token="<%= a.token %>" data-type="<%= a.media_type %>">
 				<img src="http://s3.amazonaws.com/<%= ENV['AMAZON_TOAST_BUCKET'] %>/<%= a.token %>/<%= a.token %>_1.jpg" alt="Thumbnail" />
 			</div>
 		<% end %>

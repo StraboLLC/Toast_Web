@@ -11,6 +11,9 @@ gem 'aws-s3'
 # Use Panda for Video Encoding
 gem 'panda'
 
+# Rest Client for HTTP Requests
+gem 'rest-client'
+gem 'newrelic_rpm'
 
 #gem "localtunnel"
 
