@@ -4,6 +4,118 @@
 		"selected_items":
 		[
 			[
+				"scr",
+				"scroll"
+			],
+			[
+				"webm",
+				"webm_finished"
+			],
+			[
+				"mp4",
+				"mp4_finished"
+			],
+			[
+				"web",
+				"webm_finished"
+			],
+			[
+				"cap",
+				"capture"
+			],
+			[
+				"captu",
+				"capture"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"th",
+				"thumbnail"
+			],
+			[
+				"medi",
+				"media_file_name"
+			],
+			[
+				"up",
+				"upload"
+			],
+			[
+				"capr",
+				"capture_info"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"capt",
+				"capture_info"
+			],
+			[
+				"media",
+				"media_file"
+			],
+			[
+				"Mobile",
+				"MobileApiError"
+			],
+			[
+				"med",
+				"media_file"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"en",
+				"encrypt"
+			],
+			[
+				"un",
+				"uniqueness"
+			],
+			[
+				"Mo",
+				"MobileApiResponse"
+			],
+			[
+				"Mob",
+				"MobileApiError"
+			],
+			[
+				"error_",
+				"error_string"
+			],
+			[
+				"all",
+				"all_media"
+			],
+			[
+				"center",
+				"center-logo"
+			],
+			[
+				"find",
+				"find_by_id"
+			],
+			[
+				"album",
+				"albums"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
 				"sing",
 				"single_command"
 			],
@@ -138,10 +250,6 @@
 			[
 				"m",
 				"meta"
-			],
-			[
-				"back",
-				"background	background-color: name"
 			],
 			[
 				"test",
@@ -291,108 +399,48 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1009,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/home/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 803,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/home_controller.rb",
-			"settings":
-			{
-				"buffer_size": 151,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/users_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1620,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 408,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/albums_controller.rb",
-			"settings":
-			{
-				"buffer_size": 817,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/application.css.scss",
-			"settings":
-			{
-				"buffer_size": 3405,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/albums/new.html.erb",
-			"settings":
-			{
-				"buffer_size": 620,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/session_controller.rb",
-			"settings":
-			{
-				"buffer_size": 417,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/users.css.scss",
-			"settings":
-			{
-				"buffer_size": 538,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/JSHint/JSHint.sublime-build",
 	"command_palette":
 	{
-		"height": 160.0,
+		"height": 72.0,
 		"selected_items":
 		[
 			[
-				"form",
-				"Format: Javascript"
+				"git push",
+				"Git: Push"
 			],
 			[
-				"pac",
-				"Package Control: Install Package"
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"form",
+				"Format: Javascript"
 			],
 			[
 				"for",
 				"Format: Javascript"
 			],
 			[
-				"rein",
-				"Indentation: Reindent Lines"
+				"set json",
+				"Set Syntax: JSON"
 			],
 			[
 				"re",
@@ -401,6 +449,26 @@
 			[
 				"reint",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"sass",
+				"Set Syntax: SASS"
+			],
+			[
+				"markdow",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
 			],
 			[
 				"pack",
@@ -417,10 +485,6 @@
 			[
 				"tag",
 				"Tag: Auto-Format Tags on Document"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"sublime",
@@ -469,10 +533,6 @@
 			[
 				"prefer",
 				"Preferences: Settings - Default"
-			],
-			[
-				"",
-				"Closure Linter: Fix JavaScript Style"
 			],
 			[
 				"linte",
@@ -615,7 +675,7 @@
 				"Set Syntax: HTML"
 			]
 		],
-		"width": 588.0
+		"width": 579.0
 	},
 	"console":
 	{
@@ -632,12 +692,76 @@
 	},
 	"file_history":
 	[
+		"/Users/williampotter/github/toast/README.md",
+		"/Users/williampotter/github/toast/config/environment.rb",
+		"/Users/williampotter/github/toast/sample_thumbnail.jpg",
+		"/Users/williampotter/github/toast/.gitignore",
+		"/Users/williampotter/github/toast/app/controllers/users_controller.rb",
+		"/Users/williampotter/github/toast/app/models/user.rb",
+		"/Users/williampotter/github/toast/app/controllers/notification_controller.rb",
+		"/Users/williampotter/github/toast/app/controllers/home_controller.rb",
+		"/Users/williampotter/github/toast/config/routes.rb",
+		"/Users/williampotter/github/toast/app/models/album.rb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/albums.css.scss",
+		"/Users/williampotter/github/toast/app/controllers/albums_controller.rb",
+		"/Users/williampotter/github/toast/app/controllers/mobile_api_controller.rb",
 		"/Users/williampotter/github/toast/Gemfile",
-		"/Users/williampotter/Downloads/chriseppstein-compass-f562f48/frameworks/compass/stylesheets/_lemonade.scss",
+		"/Users/williampotter/github/toast/app/views/albums/show.html.erb",
+		"/Users/williampotter/github/toast/app/models/capture.rb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/application.css.scss",
+		"/Users/williampotter/github/toast/config/environments/development.rb",
+		"/Users/williampotter/github/toast/config/environments/production.rb",
+		"/Users/williampotter/github/toast/config/database.yml",
+		"/Users/williampotter/github/toast/app/controllers/application_controller.rb",
+		"/Users/williampotter/github/toast/config/initializers/aws.rb",
 		"/Users/williampotter/github/toast/config/application.rb",
+		"/Users/williampotter/github/toast/app/views/users/index.html.erb",
+		"/Users/williampotter/github/toast/sample_info.json",
+		"/Users/williampotter/github/toast/db/migrate/20120612202814_change_column.rb",
+		"/Users/williampotter/github/toast/db/migrate/20120612194936_create_db.rb",
+		"/Users/williampotter/github/toast/db/migrate/20120612171820_add_taken_dateto_capture.rb",
+		"/Users/williampotter/github/doc.strabogis.com/webdocs.html",
+		"/Users/williampotter/github/doc.strabogis.com/index.html",
+		"/Users/williampotter/github/toast/db/migrate/20120612153111_add_panda_encoding_columns.rb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/users.css.scss",
+		"/Users/williampotter/github/toast/app/assets/javascripts/albums.js",
+		"/Users/williampotter/github/toast/app/controllers/session_controller.rb",
+		"/Users/williampotter/.zshenv",
+		"/Users/williampotter/github/toast/config/initializers/panda.rb",
+		"/Users/williampotter/github/toast/config/panda.yml",
+		"/Users/williampotter/sample_info.json",
+		"/Users/williampotter/github/toast/app/views/users/_form.html.erb",
+		"/Users/williampotter/github/toast/db/migrate/20120609195729_add.rb",
+		"/Users/williampotter/github/toast/db/migrate/20120609195141_create_captures.rb",
+		"/Users/williampotter/github/toast/app/helpers/application_helper.rb",
+		"/Users/williampotter/github/toast/app/views/users/update.html.erb",
+		"/Users/williampotter/github/toast/app/views/users/register.html.erb",
+		"/Users/williampotter/github/toast/app/views/users/logout.html.erb",
+		"/Users/williampotter/github/toast/app/views/home/about.html.erb",
+		"/Users/williampotter/github/toast/app/views/home/index.html.erb",
+		"/Users/williampotter/github/toast/app/views/home/privacy.html.erb",
+		"/Users/williampotter/github/toast/app/views/users/account.html.erb",
+		"/Users/williampotter/github/toast/app/views/users/login.html.erb",
+		"/Users/williampotter/github/toast/app/views/albums/new.html.erb",
+		"/Users/williampotter/github/toast/config/initializers/secret_token.rb",
+		"/Users/williampotter/github/toast/config/initializers/session_store.rb",
+		"/Users/williampotter/github/toast/config/aws.yml",
+		"/Users/williampotter/Desktop/install.sh",
+		"/Users/williampotter/Desktop/uninstall.sh",
+		"/Users/williampotter/github/toast/vendor/assets/stylesheets/leaflet.css",
+		"/Users/williampotter/github/toast/app/views/layouts/_topbar.html.erb",
+		"/Users/williampotter/github/toast/app/views/albums/_black-album.erb",
+		"/Users/williampotter/github/toast/app/views/users/edit.html.erb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/home.css.scss",
+		"/Users/williampotter/github/toast/db/migrate/20120607202811_album_appearance.rb",
+		"/Users/williampotter/github/toast/app/views/albums/_red-album.html.erb",
+		"/Users/williampotter/Dropbox/Strabo/Toast/Design/web/Graphics/notesbooks (svg)/redmoleskine.svg",
+		"/Users/williampotter/Dropbox/Strabo/Toast/Design/web/Graphics/notesbooks (svg)/blackmoleskine.svg",
+		"/Users/williampotter/github/toast/app/views/layouts/application.html.erb",
+		"/Users/williampotter/github/toast/app/views/albums/_album.html.erb",
+		"/Users/williampotter/Downloads/chriseppstein-compass-f562f48/frameworks/compass/stylesheets/_lemonade.scss",
 		"/Users/williampotter/github/toast/config/compass.rb",
 		"/Users/williampotter/github/toast/app/assets/stylesheets/_normalize.css.scss",
-		"/Users/williampotter/github/toast/README.md",
 		"/Users/williampotter/github/toast/README.rdoc",
 		"/Users/williampotter/github/toast/app/assets/images/rails.png",
 		"/Users/williampotter/github/toast/toast.sublime-project",
@@ -695,71 +819,7 @@
 		"/Users/williampotter/github/rambl.it/app/assets/js/ramble-obj.js",
 		"/Users/williampotter/github/rambl.it/app/assets/js/mediaelement.txt",
 		"/Users/williampotter/github/rambl.it/app/assets/css/login.css",
-		"/Users/williampotter/github/rambl.it/sftp-config.json",
-		"/Users/williampotter/github/rambl.it/app/assets/js/init.js",
-		"/Users/williampotter/github/rambl.it/app/assets/js/richmarker-compiled.js",
-		"/Users/williampotter/github/rambl.it/app/assets/js/jquery.js",
-		"/Users/williampotter/github/rambl.it/api/code.php",
-		"/Users/williampotter/github/rambl.it/api/index.php",
-		"/Users/williampotter/github/rambl.it/app/assets/js/modernizr.js",
-		"/Library/WebServer/Documents/ramble.strabogis.com/app/assets/js/ramble.js",
-		"/Library/WebServer/Documents/ramble.strabogis.com/app/assets/js/ramble-obj.js",
-		"/Library/WebServer/Documents/ramble.strabogis.com/sftp-config.json",
-		"/Library/WebServer/Documents/ramble.strabogis.com/api/code.php",
-		"/Library/WebServer/Documents/ramble.strabogis.com/api/index.php",
-		"/Library/WebServer/Documents/ramble.strabogis.com/api/logout.php",
-		"/Library/WebServer/Documents/ramble.strabogis.com/api/zencoder.php",
-		"/Library/WebServer/Documents/ramble.strabogis.com/db/ramble_db.mwb",
-		"/Volumes/wspotter/bin/checkin.sh",
-		"/Users/williampotter/Desktop/CS312quiz.txt",
-		"/Users/williampotter/Desktop/test.sql",
-		"/Users/williampotter/Desktop/test.html",
-		"/Users/williampotter/Desktop/test.rb",
-		"/Users/williampotter/Desktop/CS312quiz 2.txt",
-		"/Users/williampotter/Documents/cs312/hw5/blog/test/fixtures/posts.yml",
-		"/Users/williampotter/Documents/cs312/hw5/blog/test/fixtures/comments.yml",
-		"/Users/williampotter/Documents/cs312/hw5/blog/test/unit/comment_test.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/test/unit/post_test.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/models/comment.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/models/post.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/posts/index.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/assets/stylesheets/application.css.scss",
-		"/Users/williampotter/Documents/econ150/ps3.lyx",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/controllers/comments_controller.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/config/routes.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/posts/show.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/hw5.txt",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/controllers/posts_controller.rb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/comments/_comment.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/comments/_form.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/posts/_form.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/views/home/index.html.erb",
-		"/Users/williampotter/Downloads/hw1soln.txt",
-		"/Users/williampotter/Library/Application Support/Google/Chrome/Default/User StyleSheets/Custom.css",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/assets/stylesheets/posts.css.scss",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/views/posts/show.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/views/posts/index.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/assets/stylesheets/application.css",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/views/layouts/application.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/config/routes.rb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/assets/stylesheets/scaffolds.css.scss",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/controllers/application_controller.rb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/views/posts/edit.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/willpots/app/views/posts/new.html.erb",
-		"/Users/williampotter/Documents/cs312/hw5/blog/app/controllers/home_controller.rb",
-		"/Library/WebServer/Documents/ramble.strabogis.com/Readme.md",
-		"/Users/williampotter/Desktop/sd_feedback.txt",
-		"/Users/williampotter/Desktop/George Strait – Love's Gonna Make It Alright.txt",
-		"//.zshrc",
-		"/Volumes/wspotter/public_html/cs312/hw4/problem1/url.txt",
-		"/Volumes/wspotter/public_html/cs312-page/ratings.html",
-		"/Volumes/wspotter/public_html/cs312-page/sql_answers.txt",
-		"/Volumes/wspotter/public_html/cs312/hw4/sql_answers.txt",
-		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/Terminal/Terminal.sublime-settings",
-		"/Volumes/wspotter/public_html/cs312-page/course.html",
-		"/Volumes/wspotter/public_html/cs312-page/style.css",
-		"/Volumes/wspotter/public_html/cs312/hw4/ratings.html",
-		"/Volumes/wspotter/public_html/cs312/hw4/ratings1.css"
+		"/Users/williampotter/github/rambl.it/sftp-config.json"
 	],
 	"find":
 	{
@@ -770,6 +830,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"",
 			"/Library/Webserver/Documents/www.omegaalpha.net/css"
 		]
 	},
@@ -778,6 +839,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"parker",
+			"parkerfucksgoats",
+			"MobileApiError",
+			"first_name",
+			"@a",
+			"images/",
+			"0.22",
+			"0.05",
+			"0.19",
 			"#user-image",
 			"#",
 			"pause()",
@@ -896,23 +966,23 @@
 			"<tr><td>",
 			"tr >",
 			"<hr>",
-			"<br>",
-			"bgcolor=silver",
-			"<hr>",
-			"</font>",
-			"<font color=\"green\">",
-			"<hr>",
-			"href=[^\"]",
-			"bgcolor=silver",
-			"</font>",
-			"<font color=\"green\">"
+			"<br>"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"fuckch0p",
+			"parker",
+			"MobileApiResponse",
+			"name",
+			"a",
+			"/assets/",
+			"0.32",
+			"0.10",
+			"0.29",
 			"track",
 			"/single-pause.png",
 			"/single-play.png",
@@ -991,298 +1061,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 1009,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								646,
-								646
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/home/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 803,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/home_controller.rb",
-					"settings":
-					{
-						"buffer_size": 151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106,
-								106
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1620,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								327,
-								327
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/users/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 408,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								312,
-								312
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/controllers/albums_controller.rb",
-					"settings":
-					{
-						"buffer_size": 817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								271
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/assets/stylesheets/application.css.scss",
-					"settings":
-					{
-						"buffer_size": 3405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1484,
-								1484
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 463.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/albums/new.html.erb",
-					"settings":
-					{
-						"buffer_size": 620,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								390,
-								390
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/controllers/session_controller.rb",
-					"settings":
-					{
-						"buffer_size": 417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								59,
-								59
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/assets/stylesheets/users.css.scss",
-					"settings":
-					{
-						"buffer_size": 538,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								417,
-								417
-							]
-						],
-						"settings":
-						{
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1317,6 +1095,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.git":
+	{
+		"height": 98.0
+	},
 	"output.sftp":
 	{
 		"height": 119.0
@@ -1332,8 +1114,48 @@
 		"selected_items":
 		[
 			[
+				"readme",
+				"README.md"
+			],
+			[
 				"",
-				"/Users/williampotter/Desktop/index.html"
+				".gitignore"
+			],
+			[
+				"usercon",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"show",
+				"app/views/albums/show.html.erb"
+			],
+			[
+				"sam",
+				"sample_info.json"
+			],
+			[
+				"chan",
+				"db/migrate/20120612202814_change_column.rb"
+			],
+			[
+				"chang",
+				"db/migrate/20120612202814_change_column.rb"
+			],
+			[
+				"db",
+				"db/migrate/20120612194936_create_db.rb"
+			],
+			[
+				"db/migrate/20120612171820_add_taken_dateto_capture.rb",
+				"db/migrate/20120612171820_add_taken_dateto_capture.rb"
+			],
+			[
+				"db/migrate/20120612153111_add_panda_encoding_columns.rb",
+				"db/migrate/20120612153111_add_panda_encoding_columns.rb"
 			]
 		],
 		"width": 0.0

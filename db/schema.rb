@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120612202814) do
+ActiveRecord::Schema.define(:version => 20120613170649) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 20120612202814) do
   end
 
   create_table "captures", :force => true do |t|
-    t.string   "title",             :null => false
-    t.string   "token",             :null => false
+    t.string   "title",                                       :null => false
+    t.string   "token",                                       :null => false
     t.text     "description"
     t.decimal  "latitude"
     t.decimal  "longitude"
@@ -39,8 +39,9 @@ ActiveRecord::Schema.define(:version => 20120612202814) do
     t.boolean  "webm_finished"
     t.datetime "taken_at"
     t.integer  "album_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "orientation",       :default => "horizontal"
   end
 
   create_table "users", :force => true do |t|
