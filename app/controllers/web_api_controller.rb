@@ -20,6 +20,20 @@ class WebApiController < ApplicationController
 		render :json => @r
 	end
 
+	def album_captures
+		token = params[:data_token]
+		if token
+			@album = Album.where(:token => token).first
+			@r = WebApiResponse.new
+			@r.token = token
+			@r.album = @album
+			@r.captures = @album.captures
+		else
+			@r = WebApiError.new 500, "Did not pass a 'data_token' parameter"
+		end
+		render :json => @r
+	end
+
 	##
 	# A Class to hold Web related API Errors.
 	class WebApiError
@@ -29,5 +43,12 @@ class WebApiController < ApplicationController
 			@err = error_string
 		end
 
+	end
+	class WebApiResponse
+		attr_accessor :token, :album, :captures
+		def initialize
+			@err_num=0
+			@err="No Error"
+		end
 	end
 end

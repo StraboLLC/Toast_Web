@@ -25,7 +25,8 @@ Toast::Application.routes.draw do
 
 	# Web API
 	get "/api/geo_data" => "web_api#geo_data", :as => :api_geo_data
-
+	get "/api/album_captures" => "web_api#album_captures", :as => :api_album_captures
+	
 	# Mobile API
 	match "/mobile/api/register/" => "mobile_api#register", :as => :mobile_register
 	match "/mobile/api/login/" => "mobile_api#login", :as => :mobile_login

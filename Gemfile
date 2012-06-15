@@ -13,7 +13,6 @@ gem 'panda'
 
 # Rest Client for HTTP Requests
 gem 'rest-client'
-gem 'newrelic_rpm'
 
 #gem "localtunnel"
 
