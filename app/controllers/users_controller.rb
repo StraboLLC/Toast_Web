@@ -44,6 +44,7 @@ class UsersController < ApplicationController
 	# Inserts a new user into the database
 	def create
 		@user = User.new(params[:user])
+		puts @
 		puts @user.to_json
 		@user.password = md5 @user.password 
 		if @user.save
@@ -56,7 +57,6 @@ class UsersController < ApplicationController
 	def update
 		if session[:user_id]
 			@user = User.find(session[:user_id])
-			@user.attributes = params[:user]
 			@user.password = md5 (@user.password)
 			if @user.save
 				redirect_to profile_path, notice: 'User was successfully updated.'

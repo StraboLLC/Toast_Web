@@ -4,33 +4,27 @@
 //= require util
 //= require capture
 //= require toast-album
+//= require toast2
+
 var viewer;
 var map;
 var capture;
 var api;
-var video, note, photo, audio;
+var video;
+var note;
+var photo;
+var audio;
 var album;
-/**
- * Simple abstraction method that plays the video from the current position.
- */
 
 function play() {
 	console.log("Play");
 	video.play();
-	// $('#play-pause').css("background", "url('/build/images/pause.png') center center no-repeat");
 }
-/**
- * Pauses the video and track playback without losing the current position in playback.
- */
 
 function pause() {
 	console.log("Pause");
 	video.pause();
-	// $('#play-pause').css("background", "url('/build/images/play.png') center center no-repeat");
 }
-/**
- *
- */
 
 function reset() {
 	video.pause();
@@ -40,7 +34,16 @@ function reset() {
 function loadViewer(captureElement) {
 	setViewerMode(captureElement.mediaType);
 	if (captureElement.mediaType === "video") {
-		video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".webm";
+		if (video.canPlayType('video/webm')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".webm";
+		else if (video.canPlayType('video/mp4')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".mp4";
+		else if (video.canPlayType('video/quicktime')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".mov";
+		else video.innerHTML = "Sorry, your browser can't play HTML5 Video. Please try downloading <a href='http://google.com/chrome'>Google Chrome</a>";
+	} else if (captureElement.mediaType === "photo") {
+		photo.innerHTML = '<img src="http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + '.jpg" alt="">';
+	} else if (captureElement.mediaType === "note") {
+
+	} else if (captureElement.mediaType === "audio") {
+
 	}
 }
 
@@ -71,38 +74,72 @@ function setViewerMode(string) {
 	}
 }
 
+function createViewerChildren(element) {
+	video = document.createElement('video');
+	video.setAttribute('id', 'toast-video');
+	video.setAttribute('class', 'toast-video');
+	video.setAttribute('controls', 'controls');
+	element.appendChild(video);
+	photo = document.createElement('div');
+	photo.setAttribute('id', 'toast-photo');
+	photo.setAttribute('class', 'toast-photo');
+	element.appendChild(photo);
+	note = document.createElement('div');
+	note.setAttribute('id', 'toast-note');
+	note.setAttribute('class', 'toast-note');
+	element.appendChild(note);
+	audio = document.createElement('audio');
+	audio.setAttribute('id', 'toast-audio');
+	audio.setAttribute('class', 'toast-audio');
+	element.appendChild(audio);
+}
+
 function initializeDomVariables() {
 	api = new ToastAPI();
 	viewer = document.getElementById('viewer-box');
-	video = document.getElementById('video');
-	video.controls = "controls";
-	photo = document.getElementById('photo');
-	note = document.getElementById('note');
-	audio = document.getElementById('audio');
+	createViewerChildren(viewer);
 }
 
 function initializeListeners() {
-	if (video.addEventListener) {
-		video.addEventListener("timeupdate", updateMap, false);
-	} else if (video.attachEvent) {
-		video.attachEvent("ontimeupdate", updateMap);
-	}
-	if (video.addEventListener) {
-		video.addEventListener("ended", reset, false);
-	} else if (video.attachEvent) {
-		video.attachEvent("onended", reset);
-	}
-	if (video.addEventListener) {
-		video.addEventListener("seeking", scrubMap, false);
-	} else if (video.attachEvent) {
-		video.attachEvent("onseeking", scrubMap);
-	}
-	if (video.addEventListener) {
-		video.addEventListener("seeked", scrubMap, false);
-	} else if (video.attachEvent) {
-		video.attachEvent("onseeked", scrubMap);
+	video.addEventListener("timeupdate", updateMap, false);
+	video.addEventListener("ended", reset, false);
+	video.addEventListener("seeking", scrubMap, false);
+	video.addEventListener("seeked", scrubMap, false);
+	photo.addEventListener("click", fullscreenMode, false);
+}
+
+
+function fullscreenMode() {
+
+}
+
+function scrubMap() {
+	capture.getPointByTime(video.currentTime)
+	capture.setCurrentPoint(capture.currentPoint);
+}
+
+function updateMap() {
+	if (capture.points != null) {
+		var percentDone = 1;
+		var pointTime;
+		var cTime = video.currentTime;
+		if (cTime > video.duration) { // If video is done.
+			console.log('wtf');
+			capture.currentPoint = 0;
+		} else {
+			percentDone = cTime / video.duration;
+			if (capture.currentPoint >= capture.points.length) capture.currentPoint = capture.points.length - 1;
+			pointTime = capture.points[capture.currentPoint].timestamp;
+			while (cTime > pointTime && capture.currentPoint < capture.points.length - 1) {
+				capture.currentPoint++;
+				pointTime = capture.points[capture.currentPoint].timestamp;
+			}
+			capture.setCurrentPoint(capture.currentPoint);
+		}
 	}
 }
+
+
 // Define the map to use from MapBox
 // This is the TileJSON endpoint copied from the embed button on your map
 $(document).ready(function() {
@@ -132,30 +169,3 @@ $(document).ready(function() {
 		loadViewer(capture);
 	});
 });
-
-function scrubMap() {
-	capture.getPointByTime(video.currentTime)
-	capture.marker.setLatLng(new L.LatLng(capture.points[capture.currentPoint].latitude, capture.points[capture.currentPoint].longitude));
-	capture.marker.setIconAngle(Math.round((capture.points[capture.currentPoint].heading-180)%360));
-}
-
-function updateMap() {
-	if (capture.points != null) {
-		var percentDone = 1;
-		var pointTime;
-		var cTime = video.currentTime;
-		if (cTime > video.duration) { // If video is done.
-			console.log('wtf');
-			capture.currentPoint = 0;
-		} else {
-			percentDone = cTime / video.duration;
-			if (capture.currentPoint >= capture.points.length) capture.currentPoint = capture.points.length - 1;
-			pointTime = capture.points[capture.currentPoint].timestamp;
-			while (cTime > pointTime && capture.currentPoint < capture.points.length - 1) {
-				capture.currentPoint++;
-				pointTime = capture.points[capture.currentPoint].timestamp;
-			}
-			capture.setCurrentPoint(capture.currentPoint);
-		}
-	}
-}

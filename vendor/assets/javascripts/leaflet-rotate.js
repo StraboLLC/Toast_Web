@@ -34,6 +34,9 @@ var RotateMarker = L.Marker.extend({
 			//this._initIcon();
 			this._reset();
 		}
+	},
+	getIconAngle: function() {
+		return this.options.iconAngle || 0;
 	}
 
 });

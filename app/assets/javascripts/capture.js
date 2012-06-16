@@ -25,7 +25,7 @@ ToastCapture.prototype.drawMarker = function(map) {
 	this.startingLatLng = new L.LatLng(this.points[0].latitude, this.points[0].longitude);
 	map.setView(this.startingLatLng, 15);
 	this.marker = new RotateMarker(this.startingLatLng, {
-		iconAngle: Math.round((this.points[0].heading - 180) % 360)
+		iconAngle: Math.round((this.points[0].heading))
 	});
 	map.addLayer(this.marker);
 };
@@ -54,7 +54,7 @@ ToastCapture.prototype.removeMarker = function() {
 };
 
 ToastCapture.prototype.draw = function(map) {
-	this.drawMarker(map);
+	this.drawMarker(map)
 	this.drawPolyline(map);
 };
 
@@ -75,6 +75,12 @@ ToastCapture.prototype.getPointByTime = function(timestamp, head, tail) {
 };
 ToastCapture.prototype.setCurrentPoint = function(currentPoint) {
 	this.currentPoint = currentPoint;
-	this.marker.setIconAngle(Math.round((this.points[this.currentPoint].heading - 180) % 360));
+	var currentAngle = this.marker.getIconAngle();
+	var nextAngle= Math.round(this.points[this.currentPoint].heading);
+	var delta = (nextAngle-currentAngle);
+	if(delta>180) {
+		delta-=360;
+	}
+	this.marker.setIconAngle(currentAngle+delta);
 	this.marker.setLatLng(new L.LatLng(this.points[this.currentPoint].latitude, this.points[this.currentPoint].longitude));
 };

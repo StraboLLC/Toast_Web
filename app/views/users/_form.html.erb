@@ -19,10 +19,12 @@
   <%= f.label :email %>
   <%= f.text_field :email, :type => "email", :placeholder => "ex. boss@toast.com" %>
 </div>
+<% if @user.password.nil? %>
 <div class="field">
   <%= f.label :password %>
   <%= f.password_field :password %>
 </div>
+<% end %>
 <div class="field">
   <%= f.label :address %>
   <%= f.text_field :address, :placeholder => "ex. 123 main st." %>
