@@ -1,9 +1,10 @@
-<%=	content_for(:head) { javascript_include_tag("albums") } %>
-<%=	content_for(:head) { stylesheet_link_tag("albums") } %>
 <%=	content_for(:head) { stylesheet_link_tag "leaflet" } %>
 <%= content_for(:head) { javascript_include_tag "leaflet" } %>
+<%= content_for(:head) { javascript_include_tag "leaflet-rotate" } %>
 <%= content_for(:head) { javascript_include_tag "wax.leaf.min" } %>
 <%= render :partial => "layouts/topbar" %>
+<%=	content_for(:head) { javascript_include_tag("albums") } %>
+<%=	content_for(:head) { stylesheet_link_tag("albums") } %>
 <div id="content-box" class="content-box">
 	<div id="map-box" class="map-box">
 		

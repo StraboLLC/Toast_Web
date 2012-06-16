@@ -1,8 +1,3 @@
-/**
- * Stores information relating to a user's capture.
- * @param {Object} obj An object returned from the server.
- */
-
 function ToastCapture(obj) {
 	this.currentPoint = 0;
 	this.albumId = obj.album_id;
@@ -26,10 +21,12 @@ function ToastCapture(obj) {
 	this.points = null;
 };
 
-ToastCapture.prototype.setMap = function(map) {
+ToastCapture.prototype.drawMarker = function(map) {
 	this.startingLatLng = new L.LatLng(this.points[0].latitude, this.points[0].longitude);
 	map.setView(this.startingLatLng, 15);
-	this.marker = new L.Marker(this.startingLatLng);
+	this.marker = new RotateMarker(this.startingLatLng, {
+		iconAngle: Math.round((this.points[0].heading - 180) % 360)
+	});
 	map.addLayer(this.marker);
 };
 ToastCapture.prototype.destroy = function() {
@@ -42,7 +39,9 @@ ToastCapture.prototype.drawPolyline = function(map) {
 	for (var x in this.points) {
 		this.latLngs.push(new L.LatLng(this.points[x].latitude, this.points[x].longitude));
 	}
-	this.polyline = new L.Polyline(this.latLngs);
+	this.polyline = new L.Polyline(this.latLngs, {
+		color:"#DB6C4D"
+	});
 	map.addLayer(this.polyline);
 };
 ToastCapture.prototype.removePolyline = function() {
@@ -55,32 +54,27 @@ ToastCapture.prototype.removeMarker = function() {
 };
 
 ToastCapture.prototype.draw = function(map) {
-	this.setMap(map);
+	this.drawMarker(map);
 	this.drawPolyline(map);
 };
 
-ToastCapture.prototype.getPointByTime = function(timestamp,head,tail) {
+ToastCapture.prototype.getPointByTime = function(timestamp, head, tail) {
 	head = head || 0;
 	tail = tail || this.points.length;
-	var midpoint = parseInt((tail + head)/2);
+	var midpoint = parseInt((tail + head) / 2);
 	var length = tail - head;
-	if(length<=1) {
+	if (length <= 1) {
 		this.currentPoint = midpoint;
-	} else if(timestamp == this.points[midpoint].timestamp) {
+	} else if (timestamp == this.points[midpoint].timestamp) {
 		this.currentPoint = midpoint;
-	} else if(timestamp > this.points[midpoint].timestamp) {
-		this.getPointByTime(timestamp,midpoint,tail);
-	} else if(timestamp < this.points[midpoint].timestamp) {
-		this.getPointByTime(timestamp,head,midpoint);
+	} else if (timestamp > this.points[midpoint].timestamp) {
+		this.getPointByTime(timestamp, midpoint, tail);
+	} else if (timestamp < this.points[midpoint].timestamp) {
+		this.getPointByTime(timestamp, head, midpoint);
 	}
 };
-
-
-
-
-
-
-
-
-
-
+ToastCapture.prototype.setCurrentPoint = function(currentPoint) {
+	this.currentPoint = currentPoint;
+	this.marker.setIconAngle(Math.round((this.points[this.currentPoint].heading - 180) % 360));
+	this.marker.setLatLng(new L.LatLng(this.points[this.currentPoint].latitude, this.points[this.currentPoint].longitude));
+};

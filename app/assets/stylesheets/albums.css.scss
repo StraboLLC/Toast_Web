@@ -82,8 +82,14 @@
 			width:100%;
 			height:100%;
 		}
+		&:hover {
+			box-shadow:0 0 10px rgba(255,255,255,0.6);
+		}
 	}	
 }
 #album-token {
+	display:none;
+}
+.leaflet-control-attribution {
 	display:none;
 }
