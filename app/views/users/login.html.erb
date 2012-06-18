@@ -1,16 +1,16 @@
 <%=	content_for(:head) { javascript_include_tag("users") } %>
 <%=	content_for(:head) { stylesheet_link_tag("users") } %>
-<h1>Users#login</h1>
-
-
-<%= form_tag session_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>
+<div id="main-section" class="main-section">
+	<h1>Sign into Toast</h1>
+	<%= form_tag session_path do %>
+	<div class="field">
+		<%= label_tag :email %>
+		<%= text_field_tag :email, params[:email] %>
+	</div>
+	<div class="field">
+		<%= label_tag :password %>
+		<%= password_field_tag :password %>
+	</div>
+	<div class="actions"><%= submit_tag "Log in" %></div>
+	<% end %>
+</div>

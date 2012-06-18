@@ -56,7 +56,13 @@ class UsersController < ApplicationController
   def update
     if session[:user_id]
       @user = User.find(session[:user_id])
-      @user.password = md5 (@user.password)
+      user = params[:user]
+      @user.name = user[:name]
+      @user.email = user[:email]
+      @user.address = user[:address]
+      @user.city = user[:city]
+      @user.state = user[:state]
+      @user.zip = user[:zip]
       if @user.save
         redirect_to profile_path, notice: 'User was successfully updated.'
       else
