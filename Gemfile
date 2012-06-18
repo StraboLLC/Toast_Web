@@ -16,6 +16,8 @@ gem 'rest-client'
 
 #gem "localtunnel"
 
+# Use RMagick for Transforming Image Sizes
+gem 'rmagick'
 
 #Use the sqlite database by default
 gem 'pg'

@@ -5,7 +5,6 @@
 //= require capture
 //= require toast-album
 //= require toast2
-
 var viewer;
 var map;
 var capture;
@@ -15,6 +14,7 @@ var note;
 var photo;
 var audio;
 var album;
+var currentIndex;
 
 function play() {
 	console.log("Play");
@@ -108,7 +108,6 @@ function initializeListeners() {
 	photo.addEventListener("click", fullscreenMode, false);
 }
 
-
 function fullscreenMode() {
 
 }
@@ -139,7 +138,34 @@ function updateMap() {
 	}
 }
 
+function initializeKeyboardListeners() {
+	var RIGHT = 39;
+	var LEFT = 37;
+	document.onkeydown = function(e) {
+		var keyCode = e.which;
+		console.log(keyCode);
+		if (keyCode === RIGHT) {
+			if (currentIndex < album.captures.length - 1) {
+				console.log("Right");
+				currentIndex++;
+				reloadCapture();
+			}
+		} else if (keyCode === LEFT) {
+			console.log("Left");
+			if (currentIndex > 0) {
+				currentIndex--;
+				reloadCapture();
+			}
+		}
+	}
+}
 
+function reloadCapture() {
+	capture.destroy();
+	capture = album.captures[currentIndex];
+	api.getGeoData(capture, capture.token);
+	loadViewer(capture);
+}
 // Define the map to use from MapBox
 // This is the TileJSON endpoint copied from the embed button on your map
 $(document).ready(function() {
@@ -147,7 +173,7 @@ $(document).ready(function() {
 	album = new ToastAlbum();
 	api.getAlbumCaptures(album, document.getElementById('album-token').innerHTML)
 	initializeListeners();
-
+	initializeKeyboardListeners();
 	// Make a new Leaflet map in your container div
 	map = new L.Map('map-box', {
 		minZoom: 2
@@ -161,11 +187,12 @@ $(document).ready(function() {
 	$('.capture-preview').click(function() {
 		var media_type = this.getAttribute('data-type');
 		var token = this.getAttribute('data-token');
+		currentIndex = this.getAttribute('data-index');
 		if (capture) {
 			capture.destroy();
 		}
-		capture = album.getCaptureByToken(token);
-		api.getGeoData(capture, token);
+		capture = album.captures[currentIndex];
+		api.getGeoData(capture, capture.token);
 		loadViewer(capture);
 	});
 });

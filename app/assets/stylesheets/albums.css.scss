@@ -31,7 +31,7 @@
 	background-image: radial-gradient(center, ellipse cover,  rgba(255,255,255,0.29) 0%,rgba(255,255,255,0) 100%), url(/assets/noise3.png);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4affffff', endColorstr='#00ffffff',GradientType=1 );
 	text-align:center;
-	video {
+	#toast-video {
 		display:none;
 		height:100%;
 		margin:0 auto;
@@ -39,23 +39,28 @@
 			display:block;
 		}
 	}
-	audio {
+	#toast-audio {
 		display:none;
 		&.showing {
 			display:block;
 		}
 	}
-	#note {
+	#toast-note {
 		display:none;
 		&.showing {
 			display:block;
 		}
 	}
-	#photo {
+	#toast-photo {
 		display:none;
 		&.showing {
 			display:block;
 		}
+
+		img {
+			height:100%;
+		}
+
 	}
 }
 #media-gallery {
@@ -72,7 +77,8 @@
 		width:13%;
 		margin:0 1%;
 		position:relative;
-		border:1pt solid #666;
+		border:6pt solid #fff;
+		outline:1pt solid #666;
 		background:#fff;
 		height:90%;
 		padding: 0;

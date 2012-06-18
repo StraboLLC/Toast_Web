@@ -21,10 +21,12 @@
 	<% if @captures.nil? %>
 		<div id="album-preview" class="album-preview">You haven't uploaded any pictures or video yet?? WTF...</div>
 	<% else %>
+		<% count = 0 %>
 		<% @captures.each do |a| %>
-			<div id="capture-preview-<%= a.token %>" class="capture-preview <%= a.media_type %>" data-token="<%= a.token %>" data-type="<%= a.media_type %>">
-				<img src="http://s3.amazonaws.com/<%= ENV['AMAZON_TOAST_BUCKET'] %>/<%= a.token %>/<%= a.token %>_1.jpg" alt="Thumbnail" />
+			<div id="capture-preview-<%= a.token %>" class="capture-preview <%= a.media_type %>" data-token="<%= a.token %>" data-type="<%= a.media_type %>" data-index="<%= count %>">
+				<img src="http://s3.amazonaws.com/<%= ENV['AMAZON_TOAST_BUCKET'] %>/<%= a.token %>/<%= a.token %>-thumb.jpg" alt="Thumbnail" />
 			</div>
+			<% count+=1 %>
 		<% end %>
 	<% end %>
 </div>
