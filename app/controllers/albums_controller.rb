@@ -3,10 +3,9 @@ class AlbumsController < ApplicationController
 
 	# Shows an album
 	def show
-		if(session[:user_id])
-			@user = User.find_by_id(session[:user_id])
-		end
+
 		@album = Album.find_by_token(params[:album_token])
+		@user = User.find_by_id(@album.user_id)
 		@top_string=@album.name+" by "+@user.name.split(/(\W)/).map(&:capitalize).join
 
 

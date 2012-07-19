@@ -1,6 +1,15 @@
 require "aws/s3"
+AMAZON_ACCESS_KEY_ID="AKIAJOULK3IV4RKHDUFA"
+AMAZON_SECRET_ACCESS_KEY="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"
+AMAZON_TOAST_BUCKET="dev.toast.data"
+
+PANDA_ACCESS_KEY="06905d6e882888ddf7ca"
+PANDA_SECRET_KEY="88ec9270a1870adfcf33"
+PANDA_CLOUD_ID="9c38e4054303e9d3fbebf3dfba4ab953"
+
+
 con = AWS::S3::Base.establish_connection!(
-  :access_key_id => ENV['AMAZON_ACCESS_KEY_ID'],
-  :secret_access_key => ENV['AMAZON_SECRET_ACCESS_KEY']
+  :access_key_id => AMAZON_ACCESS_KEY_ID,
+  :secret_access_key => AMAZON_SECRET_ACCESS_KEY
 )
-aws_bucket = ENV['AMAZON_TOAST_BUCKET']
+aws_bucket = AMAZON_TOAST_BUCKET

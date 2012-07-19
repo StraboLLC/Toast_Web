@@ -39,7 +39,7 @@ ToastAPI.prototype.getGeoData = function(captureElement, token) {
 	xhr.send();
 
 }
-ToastAPI.prototype.getAlbumCaptures = function(albumElement, token) {
+ToastAPI.prototype.getAlbumCaptures = function(mapElement, albumElement, token) {
 	var xhr;
 	if (window.XMLHttpRequest) {
 		xhr = new XMLHttpRequest();
@@ -64,6 +64,7 @@ ToastAPI.prototype.getAlbumCaptures = function(albumElement, token) {
 					console.log("Error " + repsonse.err_num + " - " + response.err);
 				} else {
 					albumElement.set(response);
+					mapElement.panTo(new L.LatLng(albumElement.captures[0].latitude,albumElement.captures[0].longitude));
 				}
 			} else {
 				console.log('There was a problem with the request.');
@@ -73,3 +74,5 @@ ToastAPI.prototype.getAlbumCaptures = function(albumElement, token) {
 	xhr.open('GET', '/api/album_captures?data_token=' + token);
 	xhr.send();
 };
+
+

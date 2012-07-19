@@ -1,5 +1,5 @@
-require 'RMagick'
-include Magick
+# require 'RMagick'
+# include Magick
 
 class MobileApiController < ApplicationController
   ##
@@ -71,7 +71,7 @@ class MobileApiController < ApplicationController
         if @user
           if params[:capture_info] && params[:media_file] && params[:geo_data] && params[:thumbnail]
             @r = MobileApiResponse.new
-            aws_bucket = ENV['AMAZON_TOAST_BUCKET']
+            aws_bucket = AMAZON_TOAST_BUCKET
             capture_info = params[:capture_info]
             media_file = params[:media_file]
             geo_data = params[:geo_data]
@@ -111,21 +111,21 @@ class MobileApiController < ApplicationController
               @capture.token = json["capture"]["capture_token"]
               @capture.latitude = json["capture"]["coords"][0]
               @capture.longitude = json["capture"]["coords"][1]
+              @capture.heading = json["capture"]["heading"]
               @capture.description = json["capture"]["description"]
               @capture.taken_at = Time.at(json["capture"]['created_at'].to_i).to_datetime
               @capture.media_type = json["capture"]["media_type"]
+              @capture.orientation = json["capture"]["orientation"]
               @capture.encoding_finished = false;
               @capture.mp4_finished = false;
               @capture.webm_finished = false;
               capture_path = @capture.token+"/"+@capture.token
               # Save Capture and Move Files to S3
               if  @capture.save
-              	resized_image = Image.from_blob(thumbnail.read)
-              	resized_image.first.resize!(300,225)
-              	resized_image_data = resized_image.first.to_blob
                 AWS::S3::S3Object.store( capture_path+".json", capture_info.read, aws_bucket, :content_type => 'text/json', :access => :public_read )
                 AWS::S3::S3Object.store( capture_path+media_file_name, media_file.read, aws_bucket, :content_type => media_file.content_type, :access => :public_read )
-                AWS::S3::S3Object.store( capture_path+"-thumb.jpg", resized_image_data, aws_bucket, :content_type => 'image/jpeg', :access => :public_read )
+
+                AWS::S3::S3Object.store( capture_path+"-thumb.jpg", thumbnail.read, aws_bucket, :content_type => 'image/jpeg', :access => :public_read )
                 AWS::S3::S3Object.store( capture_path+"_geo_data.json", geo_data.read, aws_bucket, :content_type => 'text/json', :access => :public_read )
                 if(AWS::S3::S3Object.exists?(@capture.token+"/"+@capture.token+media_file_name, aws_bucket) && capture_type=="video")
                   video = Panda::Video.new(:source_url => "http://s3.amazonaws.com/"+aws_bucket+"/"+@capture.token+"/"+@capture.token+media_file_name,

@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"scro",
+				"scroll"
+			],
+			[
+				"remo",
+				"remote_url"
+			],
+			[
+				"resiz",
+				"resized_image"
+			],
+			[
+				"type",
+				"type_string"
+			],
+			[
+				"typ",
+				"type_string"
+			],
+			[
+				"conso",
+				"console.log();"
+			],
+			[
+				"cons",
+				"console.log();"
+			],
+			[
+				"alb",
+				"album"
+			],
+			[
+				"api",
+				"api_geo_data"
+			],
+			[
+				"WebA",
+				"WebApiResponse"
+			],
+			[
+				"para",
+				"params"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"r",
+				"r	attr_reader .."
+			],
+			[
 				"scr",
 				"scroll"
 			],
@@ -121,10 +173,6 @@
 			],
 			[
 				"con",
-				"console.log();"
-			],
-			[
-				"conso",
 				"console.log();"
 			],
 			[
@@ -399,13 +447,225 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/controllers/mobile_api_controller.rb",
+			"settings":
+			{
+				"buffer_size": 9172,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/web_api_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1390,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/albums.js",
+			"settings":
+			{
+				"buffer_size": 7110,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/capture.js",
+			"settings":
+			{
+				"buffer_size": 2726,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/util.js",
+			"settings":
+			{
+				"buffer_size": 1967,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/toast-album.js",
+			"settings":
+			{
+				"buffer_size": 1134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/albums.css.scss",
+			"settings":
+			{
+				"buffer_size": 6122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1045,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/albums/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/albums_controller.rb",
+			"settings":
+			{
+				"buffer_size": 316,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/JSHint/JSHint.sublime-build",
 	"command_palette":
 	{
-		"height": 72.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"bea",
+				"BeautifyRuby"
+			],
+			[
+				"",
+				"BeautifyRuby"
+			],
+			[
+				"syntax rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"fold",
+				"Code Folding: Unfold All"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ugl",
+				"Nodejs::UglifyJS"
+			],
+			[
+				"mini",
+				"Minify Javascript"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"jslin",
+				"JSLint: Run JSLint"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"natu",
+				"NaturalDocs: Decorate line comment"
+			],
+			[
+				"commen",
+				"NaturalDocs: Add Comment"
+			],
+			[
+				"jsdoc",
+				"JSDocs: Decorate line comment"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"nat",
+				"NaturalDocs: Add Comment"
+			],
+			[
+				"add com",
+				"NaturalDocs: Add Comment"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"set json",
+				"Set Syntax: JSON"
+			],
+			[
+				"jsli",
+				"JSLint: Run JSLint"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"indentation",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"conv ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"java",
+				"Format: Javascript"
+			],
+			[
+				"syntax js",
+				"Set Syntax: JSON"
+			],
 			[
 				"git push",
 				"Git: Push"
@@ -427,32 +687,8 @@
 				"Git: Commit"
 			],
 			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"form",
-				"Format: Javascript"
-			],
-			[
-				"for",
-				"Format: Javascript"
-			],
-			[
-				"set json",
-				"Set Syntax: JSON"
-			],
-			[
-				"re",
-				"Indentation: Reindent Lines"
-			],
-			[
 				"reint",
 				"Indentation: Reindent Lines"
-			],
-			[
-				"",
-				"About"
 			],
 			[
 				"sass",
@@ -463,20 +699,8 @@
 				"Set Syntax: MultiMarkdown"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"pac",
 				"Package Control: Install Package"
-			],
-			[
-				"pack",
-				"Package Control: Remove Package"
-			],
-			[
-				"rei",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"ind",
@@ -539,10 +763,6 @@
 				"Closure Linter: Fix JavaScript Style"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"fo",
 				"Format: Php"
 			],
@@ -585,10 +805,6 @@
 			[
 				"upload fi",
 				"SFTP: Upload File"
-			],
-			[
-				"java",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"gist",
@@ -675,7 +891,7 @@
 				"Set Syntax: HTML"
 			]
 		],
-		"width": 579.0
+		"width": 588.0
 	},
 	"console":
 	{
@@ -692,45 +908,74 @@
 	},
 	"file_history":
 	[
+		"/Users/williampotter/github/toast/config/initializers/aws.rb",
+		"/Users/williampotter/github/toast/app/assets/javascripts/toast-album.js",
+		"/Users/williampotter/github/toast/app/models/user.rb",
+		"/Users/williampotter/github/toast/app/controllers/users_controller.rb",
+		"/Users/williampotter/github/toast/app/views/users/login.html.erb",
+		"/Users/williampotter/github/toast/app/views/albums/show.html.erb",
+		"/Users/williampotter/github/toast/app/assets/javascripts/toast.js",
+		"/Users/williampotter/github/toast/app/assets/javascripts/albums.js",
+		"/Users/williampotter/github/toast/app/assets/javascripts/capture.js",
+		"/Users/williampotter/github/toast/app/assets/javascripts/util.js",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/albums.css.scss",
+		"/Users/williampotter/github/toast/upload.rb",
+		"/Users/williampotter/github/toast/exif.rb",
+		"/Users/williampotter/github/toast/sample.rb",
+		"/Users/williampotter/Downloads/fells_loop.gpx",
+		"/Users/williampotter/github/toast/app/assets/javascripts/toast2.js",
+		"/Users/williampotter/github/toast/Gemfile",
+		"/Users/williampotter/github/toast/sample_track/bcb8b27d3c28f597a5e518649cb1160c_geo_data.json",
+		"/Users/williampotter/github/toast/sample_track/bcb8b27d3c28f597a5e518649cb1160c.json",
+		"/Users/williampotter/github/toast/sample_track/fbf7ddb41122727a05725ddc5ef28498_geo_data.json",
+		"/Users/williampotter/github/toast/sample_track/1bc29b36f623ba82aaf6724fd3b16718.json",
+		"/Users/williampotter/github/toast/vendor/assets/javascripts/leaflet-rotate.js",
+		"/Users/williampotter/github/toast/vendor/assets/javascripts/leaflet.js",
+		"/Users/williampotter/github/toast/app/views/users/_form.html.erb",
+		"/Users/williampotter/github/toast/app/assets/stylesheets/users.css.scss",
+		"/Users/williampotter/github/toast/vendor/assets/stylesheets/leaflet.css",
+		"/Users/williampotter/Downloads/textTableDump.sql",
+		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/NaturalDocs/Default.sublime-keymap",
+		"/Users/williampotter/github/toast/track.js",
+		"/Users/williampotter/github/toast/ramble.js",
+		"/Users/williampotter/github/toast/.gitignore",
+		"/Users/williampotter/github/toast/sample_track/1bc29b36f623ba82aaf6724fd3b16718_geo_data.json",
+		"/Users/williampotter/github/toast/tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe",
+		"/Users/williampotter/github/toast/app/controllers/mobile_api_controller.rb",
+		"/Users/williampotter/github/toast/config/routes.rb",
+		"/Users/williampotter/github/toast/app/controllers/web_api_controller.rb",
+		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/williampotter/github/toast/upload.sh",
+		"/Users/williampotter/github/toast/app/controllers/web_api_controller_controller.rb",
+		"/Users/williampotter/github/toast/sample_geo_data.json",
+		"/Users/williampotter/github/toast/sample_info.json",
+		"/Users/williampotter/github/toast/db/migrate/20120613170649_add_orientation.rb",
 		"/Users/williampotter/github/toast/README.md",
 		"/Users/williampotter/github/toast/config/environment.rb",
 		"/Users/williampotter/github/toast/sample_thumbnail.jpg",
-		"/Users/williampotter/github/toast/.gitignore",
-		"/Users/williampotter/github/toast/app/controllers/users_controller.rb",
-		"/Users/williampotter/github/toast/app/models/user.rb",
 		"/Users/williampotter/github/toast/app/controllers/notification_controller.rb",
 		"/Users/williampotter/github/toast/app/controllers/home_controller.rb",
-		"/Users/williampotter/github/toast/config/routes.rb",
 		"/Users/williampotter/github/toast/app/models/album.rb",
-		"/Users/williampotter/github/toast/app/assets/stylesheets/albums.css.scss",
 		"/Users/williampotter/github/toast/app/controllers/albums_controller.rb",
-		"/Users/williampotter/github/toast/app/controllers/mobile_api_controller.rb",
-		"/Users/williampotter/github/toast/Gemfile",
-		"/Users/williampotter/github/toast/app/views/albums/show.html.erb",
 		"/Users/williampotter/github/toast/app/models/capture.rb",
 		"/Users/williampotter/github/toast/app/assets/stylesheets/application.css.scss",
 		"/Users/williampotter/github/toast/config/environments/development.rb",
 		"/Users/williampotter/github/toast/config/environments/production.rb",
 		"/Users/williampotter/github/toast/config/database.yml",
 		"/Users/williampotter/github/toast/app/controllers/application_controller.rb",
-		"/Users/williampotter/github/toast/config/initializers/aws.rb",
 		"/Users/williampotter/github/toast/config/application.rb",
 		"/Users/williampotter/github/toast/app/views/users/index.html.erb",
-		"/Users/williampotter/github/toast/sample_info.json",
 		"/Users/williampotter/github/toast/db/migrate/20120612202814_change_column.rb",
 		"/Users/williampotter/github/toast/db/migrate/20120612194936_create_db.rb",
 		"/Users/williampotter/github/toast/db/migrate/20120612171820_add_taken_dateto_capture.rb",
 		"/Users/williampotter/github/doc.strabogis.com/webdocs.html",
 		"/Users/williampotter/github/doc.strabogis.com/index.html",
 		"/Users/williampotter/github/toast/db/migrate/20120612153111_add_panda_encoding_columns.rb",
-		"/Users/williampotter/github/toast/app/assets/stylesheets/users.css.scss",
-		"/Users/williampotter/github/toast/app/assets/javascripts/albums.js",
 		"/Users/williampotter/github/toast/app/controllers/session_controller.rb",
 		"/Users/williampotter/.zshenv",
 		"/Users/williampotter/github/toast/config/initializers/panda.rb",
 		"/Users/williampotter/github/toast/config/panda.yml",
 		"/Users/williampotter/sample_info.json",
-		"/Users/williampotter/github/toast/app/views/users/_form.html.erb",
 		"/Users/williampotter/github/toast/db/migrate/20120609195729_add.rb",
 		"/Users/williampotter/github/toast/db/migrate/20120609195141_create_captures.rb",
 		"/Users/williampotter/github/toast/app/helpers/application_helper.rb",
@@ -741,14 +986,12 @@
 		"/Users/williampotter/github/toast/app/views/home/index.html.erb",
 		"/Users/williampotter/github/toast/app/views/home/privacy.html.erb",
 		"/Users/williampotter/github/toast/app/views/users/account.html.erb",
-		"/Users/williampotter/github/toast/app/views/users/login.html.erb",
 		"/Users/williampotter/github/toast/app/views/albums/new.html.erb",
 		"/Users/williampotter/github/toast/config/initializers/secret_token.rb",
 		"/Users/williampotter/github/toast/config/initializers/session_store.rb",
 		"/Users/williampotter/github/toast/config/aws.yml",
 		"/Users/williampotter/Desktop/install.sh",
 		"/Users/williampotter/Desktop/uninstall.sh",
-		"/Users/williampotter/github/toast/vendor/assets/stylesheets/leaflet.css",
 		"/Users/williampotter/github/toast/app/views/layouts/_topbar.html.erb",
 		"/Users/williampotter/github/toast/app/views/albums/_black-album.erb",
 		"/Users/williampotter/github/toast/app/views/users/edit.html.erb",
@@ -785,7 +1028,6 @@
 		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/User/SFTP.errors.log",
 		"/Users/williampotter/github/rambl.it/app/views/home.php",
 		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/User/SublimeLint.sublime-settings",
-		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/williampotter/github/rambl.it/index.php",
 		"/Users/williampotter/github/rambl.it/client/css/global.css",
 		"/Users/williampotter/github/rambl.it/make",
@@ -793,33 +1035,7 @@
 		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/User/Camaleon.sublime-settings",
 		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/williampotter/github/rambl.it/Readme.md",
-		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/sublime-closure-linter/sublime-closure-linter.sublime-settings",
-		"/Users/williampotter/.zshrc",
-		"/Users/williampotter/Downloads/compiler-latest/README",
-		"/Users/williampotter/github/rambl.it/client/js/libs/jQuery-1.3-Doc.js",
-		"/Users/williampotter/github/rambl.it/client/css/fonts.css",
-		"/Users/williampotter/github/rambl.it/.gitignore",
-		"/Users/williampotter/.ssh/id_rsa.pub",
-		"/Users/williampotter/github/rambl.it/client/js/libs/jquery-ui.js",
-		"/Users/williampotter/github/rambl.it/tools/jsdoc-tk/templates/jsdoc/index.tmpl",
-		"/Users/williampotter/github/rambl.it/tools/jsdoc-tk/templates/jsdoc/static/header.html",
-		"/Users/williampotter/github/rambl.it/tools/jsdoc-tk/templates/jsdoc/static/default.css",
-		"/Users/williampotter/github/rambl.it/404.html",
-		"/Users/williampotter/github/rambl.it/client/css/login.css",
-		"/Users/williampotter/github/rambl.it/client/build/style.css",
-		"/Users/williampotter/github/rambl.it/app/assets/js/ramble.js",
-		"/Users/williampotter/github/rambl.it/app/assets/css/global.css",
-		"/Users/williampotter/github/rambl.it/client/css/images/ui-bg_glass_75_e6e6e6_1x400.png",
-		"/Users/williampotter/github/rambl.it/build.sh",
-		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/SFTP/Default (OSX).sublime-keymap",
-		"/Users/williampotter/Library/Application Support/Sublime Text 2/Packages/SFTP/SFTP.sublime-settings",
-		"/Users/williampotter/github/rambl.it/rambl.it.sublime-workspace",
-		"/Users/williampotter/github/rambl.it/rambl.it.sublime-project",
-		"/Users/williampotter/github/rambl.it/app/assets/js/ramble-obj.js",
-		"/Users/williampotter/github/rambl.it/app/assets/js/mediaelement.txt",
-		"/Users/williampotter/github/rambl.it/app/assets/css/login.css",
-		"/Users/williampotter/github/rambl.it/sftp-config.json"
+		"/Users/williampotter/github/rambl.it/Readme.md"
 	],
 	"find":
 	{
@@ -839,6 +1055,20 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"dropdown-trigger",
+			"captureElement",
+			"marker",
+			"capture",
+			"followRoute",
+			":",
+			"this",
+			"\"",
+			"viewer.video",
+			"pause()",
+			"tracks[cT]",
+			" video",
+			"Capture",
+			"httpRequest",
 			"parker",
 			"parkerfucksgoats",
 			"MobileApiError",
@@ -952,28 +1182,25 @@
 			"getTrack",
 			" ",
 			"\n\n",
-			" ",
-			"11px",
-			"</?t[rd]>",
-			"key",
-			"key?",
-			"</tr>",
-			"</td>",
-			"<td>",
-			"<tr>",
-			"td",
-			" - ",
-			"<tr><td>",
-			"tr >",
-			"<hr>",
-			"<br>"
+			" "
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"this.capture",
+			"this",
+			"updateMap",
+			"=",
+			"ToastAPI.prototype",
+			"'",
+			"video",
+			"capture",
+			" viewer.video",
+			"ToastCapture",
+			"xhr",
 			"fuckch0p",
 			"parker",
 			"MobileApiResponse",
@@ -1059,8 +1286,329 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/mobile_api_controller.rb",
+					"settings":
+					{
+						"buffer_size": 9172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/web_api_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								881,
+								881
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								841,
+								841
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/albums.js",
+					"settings":
+					{
+						"buffer_size": 7110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2578.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/capture.js",
+					"settings":
+					{
+						"buffer_size": 2726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/util.js",
+					"settings":
+					{
+						"buffer_size": 1967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/toast-album.js",
+					"settings":
+					{
+						"buffer_size": 1134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/albums.css.scss",
+					"settings":
+					{
+						"buffer_size": 6122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/kuroir-SCSS.tmbundle/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								315
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/albums/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controllers/albums_controller.rb",
+					"settings":
+					{
+						"buffer_size": 316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								221,
+								221
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1095,7 +1643,7 @@
 		]
 	},
 	"menu_visible": true,
-	"output.git":
+	"output.exec":
 	{
 		"height": 98.0
 	},
@@ -1114,12 +1662,176 @@
 		"selected_items":
 		[
 			[
-				"readme",
-				"README.md"
+				"",
+				"app/controllers/web_api_controller.rb"
 			],
 			[
-				"",
+				"appalbum",
+				"app/controllers/albums_controller.rb"
+			],
+			[
+				"show",
+				"app/views/albums/show.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"albumscss",
+				"app/assets/stylesheets/albums.css.scss"
+			],
+			[
+				"toastal",
+				"app/assets/javascripts/toast-album.js"
+			],
+			[
+				"util",
+				"app/assets/javascripts/util.js"
+			],
+			[
+				"capture",
+				"app/assets/javascripts/capture.js"
+			],
+			[
+				"album.js",
+				"app/assets/javascripts/albums.js"
+			],
+			[
+				"user.rb",
+				"app/models/user.rb"
+			],
+			[
+				"uplad",
+				"upload.rb"
+			],
+			[
+				"_ge",
+				"sample_track/bcb8b27d3c28f597a5e518649cb1160c_geo_data.json"
+			],
+			[
+				"bc",
+				"sample_track/bcb8b27d3c28f597a5e518649cb1160c.json"
+			],
+			[
+				"geo",
+				"sample_track/bcb8b27d3c28f597a5e518649cb1160c_geo_data.json"
+			],
+			[
+				"users_",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"up",
+				"upload.rb"
+			],
+			[
+				"b",
+				"sample_track/bcb8b27d3c28f597a5e518649cb1160c.json"
+			],
+			[
+				"eg",
+				"sample_track/fbf7ddb41122727a05725ddc5ef28498_geo_data.json"
+			],
+			[
+				".json",
+				"sample_track/bcb8b27d3c28f597a5e518649cb1160c.json"
+			],
+			[
+				"1bc29b36f623ba82aaf6724fd3b16718",
+				"sample_track/1bc29b36f623ba82aaf6724fd3b16718.json"
+			],
+			[
+				"toast2",
+				"app/assets/javascripts/toast2.js"
+			],
+			[
+				"users.cs",
+				"app/assets/stylesheets/users.css.scss"
+			],
+			[
+				"leaf",
+				"vendor/assets/stylesheets/leaflet.css"
+			],
+			[
+				"leaflet",
+				"vendor/assets/javascripts/leaflet.js"
+			],
+			[
+				"rotate",
+				"vendor/assets/javascripts/leaflet-rotate.js"
+			],
+			[
+				"leafl",
+				"vendor/assets/javascripts/leaflet.js"
+			],
+			[
+				"albumcss",
+				"app/assets/stylesheets/albums.css.scss"
+			],
+			[
+				"toast-",
+				"app/assets/javascripts/toast-album.js"
+			],
+			[
+				"toast-al",
+				"app/assets/javascripts/toast-album.js"
+			],
+			[
+				"capture.js",
+				"app/assets/javascripts/capture.js"
+			],
+			[
+				"git",
 				".gitignore"
+			],
+			[
+				"1b",
+				"sample_track/1bc29b36f623ba82aaf6724fd3b16718_geo_data.json"
+			],
+			[
+				"1",
+				"tmp/cache/assets/C62/1D0/sprockets%2F1638f87db345b13872695759502b54fe"
+			],
+			[
+				"1bc29b36f623ba82aaf6724fd3b16718_",
+				"sample_track/1bc29b36f623ba82aaf6724fd3b16718_geo_data.json"
+			],
+			[
+				"1bc29b36f623ba82aaf6724fd3b16718.",
+				"sample_track/1bc29b36f623ba82aaf6724fd3b16718.json"
+			],
+			[
+				"upl",
+				"upload.rb"
+			],
+			[
+				"track",
+				"track.js"
+			],
+			[
+				"ram",
+				"ramble.js"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"gemfil",
+				"Gemfile"
+			],
+			[
+				"web",
+				"app/controllers/web_api_controller_controller.rb"
+			],
+			[
+				"add",
+				"db/migrate/20120613170649_add_orientation.rb"
+			],
+			[
+				"readme",
+				"README.md"
 			],
 			[
 				"usercon",
@@ -1128,10 +1840,6 @@
 			[
 				"user",
 				"app/models/user.rb"
-			],
-			[
-				"show",
-				"app/views/albums/show.html.erb"
 			],
 			[
 				"sam",

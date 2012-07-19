@@ -87,12 +87,12 @@ Toast.prototype.scrubMap = function() {
 Toast.prototype.loadViewer = function() {
 	this.setViewerMode(this.capture.mediaType);
 	if (this.capture.mediaType === "video") {
-		if (this.video.canPlayType('video/webm')) this.video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + this.capture.token + "/" + this.capture.token + ".webm";
-		else if (this.video.canPlayType('video/mp4')) this.video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + this.capture.token + "/" + this.capture.token + ".mp4";
-		else if (this.video.canPlayType('video/quicktime')) this.video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + this.capture.token + "/" + this.capture.token + ".mov";
+		if (this.video.canPlayType('video/webm')) this.video.src = 'http://s3.amazonaws.com/dev.toast.data/' + this.capture.token + "/" + this.capture.token + ".webm";
+		else if (this.video.canPlayType('video/mp4')) this.video.src = 'http://s3.amazonaws.com/dev.toast.data/' + this.capture.token + "/" + this.capture.token + ".mp4";
+		else if (this.video.canPlayType('video/quicktime')) this.video.src = 'http://s3.amazonaws.com/dev.toast.data/' + this.capture.token + "/" + this.capture.token + ".mov";
 		else this.video.innerHTML = "Sorry, your browser can't play HTML5 Video. Please try downloading <a href='http://google.com/chrome'>Google Chrome</a>";
 	} else if (this.capture.mediaType === "photo") {
-		this.photo.innerHTML = '<img src="http://s3.amazonaws.com/dev.toast.strabo/' + this.capture.token + "/" + this.capture.token + '.jpg" alt="">';
+		this.photo.innerHTML = '<img src="http://s3.amazonaws.com/dev.toast.data/' + this.capture.token + "/" + this.capture.token + '.jpg" alt="">';
 	} else if (this.capture.mediaType === "note") {
 
 	} else if (this.capture.mediaType === "audio") {

@@ -8,6 +8,7 @@ function ToastCapture(obj) {
 	this.jobId = obj.job_id;
 	this.latitude = obj.latitude;
 	this.longitude = obj.longitude;
+	this.heading = obj.heading;
 	this.mediaType = obj.media_type;
 	this.mp4Finished = obj.mp4_finished;
 	this.mp4Id = obj.mp4_id;
@@ -24,10 +25,9 @@ function ToastCapture(obj) {
 ToastCapture.prototype.drawMarker = function(map) {
 	this.startingLatLng = new L.LatLng(this.points[0].latitude, this.points[0].longitude);
 	map.setView(this.startingLatLng, 15);
-	this.marker = new RotateMarker(this.startingLatLng, {
-		iconAngle: Math.round((this.points[0].heading))
-	});
-	map.addLayer(this.marker);
+	this.marker.setLatLng(this.startingLatLng);
+	this.marker.setIconAngle(Math.round((this.points[0].heading)));
+	// map.addLayer(this.marker);
 };
 ToastCapture.prototype.destroy = function() {
 	this.removePolyline();

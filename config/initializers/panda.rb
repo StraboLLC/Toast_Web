@@ -1,6 +1,10 @@
+PANDA_ACCESS_KEY="06905d6e882888ddf7ca"
+PANDA_SECRET_KEY="88ec9270a1870adfcf33"
+PANDA_CLOUD_ID="9c38e4054303e9d3fbebf3dfba4ab953"
+
 Panda.configure do
-  access_key ENV['PANDA_ACCESS_KEY']
-  secret_key ENV['PANDA_SECRET_KEY']
-  cloud_id ENV['PANDA_CLOUD_ID']
+  access_key PANDA_ACCESS_KEY
+  secret_key PANDA_SECRET_KEY
+  cloud_id PANDA_CLOUD_ID
 end
 

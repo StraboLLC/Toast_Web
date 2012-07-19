@@ -1,15 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
+central_woodstock:
+  user_id: <%= Fixtures.identify(:will) %>
+  name: Central Woodstock
   public: false
-  cover: MyString
+  cover: red
   uploaded_at: 2012-06-09 15:49:19
-  token: MyString
-
-two:
-  name: MyString
-  public: false
-  cover: MyString
-  uploaded_at: 2012-06-09 15:49:19
-  token: MyString
+  token: f450ca989145477cc23376a212ac0428

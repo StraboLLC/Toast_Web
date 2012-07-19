@@ -14,7 +14,9 @@ gem 'panda'
 # Rest Client for HTTP Requests
 gem 'rest-client'
 
-#gem "localtunnel"
+group :development do
+	gem "localtunnel"
+end
 
 # Use RMagick for Transforming Image Sizes
 gem 'rmagick'

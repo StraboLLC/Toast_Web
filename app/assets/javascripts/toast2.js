@@ -29,12 +29,12 @@ function Toast() {
 	function loadViewer(captureElement) {
 		setViewerMode(captureElement.mediaType);
 		if (captureElement.mediaType === "video") {
-			if (video.canPlayType('video/webm')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".webm";
-			else if (video.canPlayType('video/mp4')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".mp4";
-			else if (video.canPlayType('video/quicktime')) video.src = 'http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + ".mov";
+			if (video.canPlayType('video/webm')) video.src = 'http://s3.amazonaws.com/dev.toast.data/' + captureElement.token + "/" + captureElement.token + ".webm";
+			else if (video.canPlayType('video/mp4')) video.src = 'http://s3.amazonaws.com/dev.toast.data/' + captureElement.token + "/" + captureElement.token + ".mp4";
+			else if (video.canPlayType('video/quicktime')) video.src = 'http://s3.amazonaws.com/dev.toast.data/' + captureElement.token + "/" + captureElement.token + ".mov";
 			else video.innerHTML = "Sorry, your browser can't play HTML5 Video. Please try downloading <a href='http://google.com/chrome'>Google Chrome</a>";
 		} else if (captureElement.mediaType === "photo") {
-			photo.innerHTML = '<img src="http://s3.amazonaws.com/dev.toast.strabo/' + captureElement.token + "/" + captureElement.token + '.jpg" alt="">';
+			photo.innerHTML = '<img src="http://s3.amazonaws.com/dev.toast.data/' + captureElement.token + "/" + captureElement.token + '.jpg" alt="">';
 		} else if (captureElement.mediaType === "note") {
 
 		} else if (captureElement.mediaType === "audio") {

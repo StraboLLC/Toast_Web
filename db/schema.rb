@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120613170649) do
+ActiveRecord::Schema.define(:version => 20120628012709) do
 
   create_table "albums", :force => true do |t|
     t.string   "name"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20120613170649) do
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
     t.string   "orientation",       :default => "horizontal"
+    t.decimal  "heading"
   end
 
   create_table "users", :force => true do |t|

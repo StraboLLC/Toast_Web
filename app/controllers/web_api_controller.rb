@@ -3,7 +3,7 @@ class WebApiController < ApplicationController
   def geo_data
     token = params[:data_token]
     if token
-      @r = RestClient.get 'http://s3.amazonaws.com/'+ENV['AMAZON_TOAST_BUCKET']+'/'+token+'/'+token+'_geo_data.json' do |response, request, result, &block|
+      @r = RestClient.get 'http://s3.amazonaws.com/'+AMAZON_TOAST_BUCKET+'/'+token+'/'+token+'_geo_data.json' do |response, request, result, &block|
         case response.code
         when 200
           @r = response
