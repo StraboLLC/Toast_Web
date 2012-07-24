@@ -14,19 +14,23 @@ ToastAlbum.prototype.set = function(obj) {
 		this.captures.push(new ToastCapture(obj.captures[x]));
 	}
 	this.bounds = new L.LatLngBounds();
-	this.clusterer = new LeafClusterer(map);
-	var markers=[];
+
+	this.clusterer = new L.MarkerClusterGroup();
+	L.MarkerClusterDefault.bindEvents(map, this.clusterer);
+
 
 	for (x in this.captures) {
 		console.log(this.captures[x]);
 		this.captures[x].startingLatLng = new L.LatLng(this.captures[x].latitude, this.captures[x].longitude);
 		this.bounds.extend(this.captures[x].startingLatLng);
-		this.captures[x].marker = new RotateMarker(this.captures[x].startingLatLng);
+		this.captures[x].marker = new L.Marker(this.captures[x].startingLatLng);
 		this.captures[x].marker.setIconAngle(this.captures[x].heading);
-		markers.push(this.captures[x].marker);
-		map.addLayer(this.captures[x].marker);
+
+		// map.addLayer(this.captures[x].marker);
+		this.clusterer.addLayer(this.captures[x].marker);
 	}
-	// this.clusterer.addMarkers(markers);
+	map.addLayer(this.clusterer);
+
 
 }
 ToastAlbum.prototype.getCapture = function(index) {

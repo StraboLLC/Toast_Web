@@ -223,15 +223,14 @@ $(document).ready(function() {
 	}).setView(new L.LatLng(38.9, -77.035), 10);
     // var openCycleMapLandscapeLayer = new L.TileLayer('http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png', {maxZoom: 17});
     // map.addLayer(openCycleMapLandscapeLayer);
-    var openCycleMapCycleLayer = new L.TileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {maxZoom: 17});	
+    var openCycleMapCycleLayer = new L.TileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {maxZoom: 16});	
     map.addLayer(openCycleMapCycleLayer);
-    console.log('hi');
-    // var topOsmReliefLayer = new L.TileLayer('http://{s}.tile.stamen.com/toposm-color-relief/{z}/{x}/{y}.jpg', {maxZoom: 17});	
-    // map.addLayer(topOsmReliefLayer);
-    // var topOsmContourLayer = new L.TileLayer('http://{s}.tile.stamen.com/toposm-contours/{z}/{x}/{y}.jpg', {maxZoom: 17});
-    // map.addLayer(topOsmContourLayer);
-	// var stamenLayer = new L.StamenTileLayer("terrain");
-	// map.addLayer(stamenLayer);
+	var stamenLayer = new L.StamenTileLayer("terrain", {maxZoom: 16});
+	map.addLayer(stamenLayer);
+    var topOsmReliefLayer = new L.TileLayer('http://{s}.tile.stamen.com/toposm-color-relief/{z}/{x}/{y}.jpg', {maxZoom: 14});	
+    map.addLayer(topOsmReliefLayer);
+    var topOsmContourLayer = new L.TileLayer('http://{s}.tile.stamen.com/toposm-contours/{z}/{x}/{y}.jpg', {maxZoom: 13});
+    map.addLayer(topOsmContourLayer);
 
 	// // Get metadata about the map from MapBox
 	// wax.tilejson('http://a.tiles.mapbox.com/v3/strabo.map-e5dtmwjx.jsonp', function(tilejson) {

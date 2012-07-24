@@ -5,26 +5,24 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# Use the Amazon SDK for storing files
-gem 'aws-s3'
 
-# Use Panda for Video Encoding
+gem 'aws-s3'
 gem 'panda'
 
-# Rest Client for HTTP Requests
 gem 'rest-client'
 
 group :development do
 	gem "localtunnel"
 end
 
-# Use RMagick for Transforming Image Sizes
 gem 'rmagick'
 
-#Use the sqlite database by default
 gem 'pg'
 
 gem 'json'
+
+gem 'jquery-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -37,19 +35,5 @@ group :assets do
 
 	gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
 gem 'bcrypt-ruby'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'

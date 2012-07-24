@@ -1,21 +1,25 @@
 <%=	content_for(:head) { stylesheet_link_tag "leaflet" } %>
-<%= content_for(:head) { javascript_include_tag "leaflet" } %>
+<%=	content_for(:head) { stylesheet_link_tag "MarkerCluster" } %>
+<%=	content_for(:head) { stylesheet_link_tag "MarkerCluster.Default" } %>
+<%= content_for(:head) { javascript_include_tag "leaflet-src" } %>
 <%= content_for(:head) { javascript_include_tag 'http://maps.stamen.com/js/tile.stamen.js' } %>
 <%= content_for(:head) { javascript_include_tag "leaflet-rotate" } %>
 <%= content_for(:head) { javascript_include_tag "wax.leaf.min" } %>
+
+<%= content_for(:head) { javascript_include_tag "MarkerCluster.Default" } %>
+<%= content_for(:head) { javascript_include_tag "MarkerClusterGroup" } %>
+<%= content_for(:head) { javascript_include_tag "MarkerCluster" } %>
+<%= content_for(:head) { javascript_include_tag "MarkerCluster.QuickHull" } %>
+<%= content_for(:head) { javascript_include_tag "MarkerCluster.Spiderfier" } %>
+
 <%= render :partial => "layouts/topbar" %>
-<%=	content_for(:head) { javascript_include_tag("albums") } %>
+<%=	content_for(:head) { javascript_include_tag("album.show") } %>
 <%=	content_for(:head) { stylesheet_link_tag("albums") } %>
 <div id="content-box" class="content-box">
 	<div id="map-box" class="map-box">
 		
 	</div>
-	<div id="viewer-box" class="viewer-box">
-<!-- 		<video id="video"></video>
-		<div id="photo"></div>
-		<audio id="audio"></audio>
-		<div id="note"></div>
- -->	</div>
+	<div id="viewer-box" class="viewer-box"></div>
 </div>
 <div id="media-gallery">
 	<% @captures = @album.captures %>
