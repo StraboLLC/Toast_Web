@@ -8,7 +8,6 @@
 var viewer;
 var map;
 var capture;
-var api;
 var video;
 var note;
 var photo;
@@ -95,7 +94,6 @@ function createViewerChildren(element) {
 }
 
 function initializeDomVariables() {
-	api = new ToastAPI();
 	viewer = document.getElementById('viewer-box');
 	createViewerChildren(viewer);
 }
@@ -207,7 +205,7 @@ function initializeKeyboardListeners() {
 function reloadCapture() {
 	// if(capture) capture.destroy();
 	capture = album.getCapture(currentIndex);
-	api.getGeoData(capture, capture.token);
+	ToastAPI.getGeoData(capture, capture.token);
 	loadViewer(capture);
 }
 // Define the map to use from MapBox
@@ -236,7 +234,7 @@ $(document).ready(function() {
 	// wax.tilejson('http://a.tiles.mapbox.com/v3/strabo.map-e5dtmwjx.jsonp', function(tilejson) {
 	// 	map.addLayer(new wax.leaf.connector(tilejson));
 	// });
-	api.getAlbumCaptures(map, album, document.getElementById('album-token').innerHTML)
+	ToastAPI.getAlbumCaptures(map, album, document.getElementById('album-token').innerHTML)
 	initializeListeners();
 	initializeKeyboardListeners();
     

@@ -25,7 +25,10 @@ ToastAlbum.prototype.set = function(obj) {
 		this.bounds.extend(this.captures[x].startingLatLng);
 		this.captures[x].marker = new L.Marker(this.captures[x].startingLatLng);
 		this.captures[x].marker.setIconAngle(this.captures[x].heading);
-
+		this.captures[x].marker.addEventListener("click", function() {
+			ToastAPI.getGeoData(this.captures[x], this.captures[x].token);
+			loadViewer(this.captures[x]);
+		});
 		// map.addLayer(this.captures[x].marker);
 		this.clusterer.addLayer(this.captures[x].marker);
 	}
