@@ -20,14 +20,16 @@ ToastAlbum.prototype.set = function(obj) {
 
 
 	for (x in this.captures) {
-		console.log(this.captures[x]);
+		var anAlbum = this;
 		this.captures[x].startingLatLng = new L.LatLng(this.captures[x].latitude, this.captures[x].longitude);
 		this.bounds.extend(this.captures[x].startingLatLng);
 		this.captures[x].marker = new L.Marker(this.captures[x].startingLatLng);
 		this.captures[x].marker.setIconAngle(this.captures[x].heading);
+		this.captures[x].marker.token = this.captures[x].token;
 		this.captures[x].marker.addEventListener("click", function() {
-			ToastAPI.getGeoData(this.captures[x], this.captures[x].token);
-			loadViewer(this.captures[x]);
+			var aCapture = anAlbum.getCaptureByToken(this.token);
+			ToastAPI.getGeoData(aCapture, aCapture.token);
+			loadViewer(aCapture);
 		});
 		// map.addLayer(this.captures[x].marker);
 		this.clusterer.addLayer(this.captures[x].marker);

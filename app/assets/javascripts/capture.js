@@ -24,7 +24,7 @@ function ToastCapture(obj) {
 
 ToastCapture.prototype.drawMarker = function(map) {
 	this.startingLatLng = new L.LatLng(this.points[0].latitude, this.points[0].longitude);
-	map.setView(this.startingLatLng, 15);
+	map.setView(this.startingLatLng, map.getZoom());
 	this.marker.setLatLng(this.startingLatLng);
 	this.marker.setIconAngle(Math.round((this.points[0].heading)));
 	// map.addLayer(this.marker);
