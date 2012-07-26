@@ -208,6 +208,9 @@ function reloadCapture() {
 	ToastAPI.getGeoData(capture, capture.token);
 	loadViewer(capture);
 }
+function changeName() {
+
+}
 // Define the map to use from MapBox
 // This is the TileJSON endpoint copied from the embed button on your map
 $(document).ready(function() {
@@ -243,5 +246,14 @@ $(document).ready(function() {
 		currentIndex = this.getAttribute('data-index');
 		reloadCapture();
 		$(document.body).removeClass('browse');
+	});
+	$('#album-name').click(function() {
+		this.contentEditable=true;
+	});
+	$('#album-name').keypress(function(e) {
+		 var code = e.which;
+		 if(code===13) {
+		 	this.contentEditable=false;
+		 }
 	});
 });
