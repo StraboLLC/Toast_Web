@@ -5,6 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
+  host: localhost
   username: rails
   database: rails_db
   password:
